@@ -26,3 +26,6 @@ Fue elegida por la sencilles del motor de busqueda, es intuitiva, además de que
 
 Link 4: https://www.kwmexico.mx/?lan=es-MX
 Fue elegida porque permite una mejor busqueda de bienes raices incluyendo el filtrado por tipo de propiedad, número de recámaras y rango de precios
+
+Link 5: https://century21mexico.com/ 
+Fue elegida por su diseño y diversas caracteristicas como su busqueda avanzada y organización intuitiva.
