@@ -10,3 +10,4 @@ Ramón Barraza Venegas 19 años, estudiante de Ingeniería en Innovación y Dise
 
 Maximiliano Contreras 21 años, alumno de la carrera de Licenciado en Administración y Estrategia de Negocios en el Tecnológico de Monterrey, Campus Monterrey. Interés en front-end.
 
+Arlette Sanchez Santos 23 años estudio Ingeniería en Biotecnología en la UPAEP y me gusta mucho correr.
