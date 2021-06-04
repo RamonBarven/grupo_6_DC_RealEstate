@@ -8,5 +8,5 @@ Descripción de integrantes
 
 Ramón Barraza Venegas 19 años, estudiante de Ingeniería en Innovación y Diseño en la Universidad Panamericana campus Aguascalientes.
 
-
+Maximiliano Contreras 21 años, alumno de la carrera de Licenciado en Administración y Estrategia de Negocios en el Tecnológico de Monterrey, Campus Monterrey. Interés en front-end.
 
