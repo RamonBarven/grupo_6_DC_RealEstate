@@ -21,3 +21,8 @@ Se escogió esta liga porque cuenta con el atractivo visual que se estaría busc
 Link 2: http://www.remax.com.mx/propiedades 
 Esta fue elegida por la implementación de mapa que tiene. Esto ayuda a facilitar el proceso de búsqueda de una propiedad cuando se quiere una ubicación en específico.
 
+Link 3:https://www.lamudi.com.mx/
+Fue elegida por la sencilles del motor de busqueda, es intuitiva, además de que capta la atención con la imagen principal debajo del motor de busqueda.
+
+Link 4: https://www.kwmexico.mx/?lan=es-MX
+Fue elegida porque permite una mejor busqueda de bienes raices incluyendo el filtrado por tipo de propiedad, número de recámaras y rango de precios
