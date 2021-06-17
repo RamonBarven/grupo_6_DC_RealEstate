@@ -29,3 +29,6 @@ Fue elegida porque permite una mejor busqueda de bienes raices incluyendo el fil
 
 Link 5: https://century21mexico.com/ 
 Fue elegida por su diseño y diversas caracteristicas como su busqueda avanzada y organización intuitiva.
+
+Wireframe:
+Se trabajó un wireframe con 5 secciones en Figma. El link de visualización es: https://www.figma.com/file/hW0keStJ2QGSxrrPOvn5RW/Untitled?node-id=0%3A1
