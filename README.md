@@ -32,3 +32,6 @@ Fue elegida por su diseño y diversas caracteristicas como su busqueda avanzada 
 
 Wireframe:
 Se trabajó un wireframe con 5 secciones en Figma. El link de visualización es: https://www.figma.com/file/hW0keStJ2QGSxrrPOvn5RW/Untitled?node-id=0%3A1
+
+Tablero de trabajo:
+Link: https://trello.com/b/cfwr9KAW/sprint-2
