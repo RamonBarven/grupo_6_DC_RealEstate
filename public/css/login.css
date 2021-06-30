@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('.././img/fondo-login.png');
+    background-size: cover;
+}
+
+.contenedor-todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.contenedor-login {
+    width: 340px;
+    height: 720px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    font-size: 72px;
+    color: #007FC6;
+    text-align: center;
+}
+
+#user {
+    font-size: 125px;
+    color: #007FC6;
+    opacity: 1;
+}
+
+.login-parrafo {
+    font-size: 36px;
+    color: #005471;
+    text-align: center;
+}
+
+#email, #password {
+    width: 270px;
+    height: 55px;
+    border-radius: 30px;
+    background-color: #f4f4f4;
+    color: #5F5F5F;
+    font-size: 36px;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+}
+
+.boton-login {
+    width: 220px;
+    height: 84px;
+    background-color: #F19915;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+.contenedor-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
