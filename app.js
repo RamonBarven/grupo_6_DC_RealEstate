@@ -26,4 +26,4 @@ app.get('/', (req,res) => {
 app.get('/', (req,res) => {
     let htmlPath = path.resolve(__dirname,'./views/signUp.html');
     res.sendFile(htmlPath);
-} )
+} ) 

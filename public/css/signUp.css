@@ -18,15 +18,15 @@ body {
 }
 
 .logo {
-    margin-top: 45px;
+    margin-top: 20px;
     margin-left: 10px;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .contenedor-signup {
-    width: 680px;
-    height: 1440px;
+    width: 200px;
+    height: 500px;
     background-color:#007FC6;
     display: flex;
     flex-direction: column;
@@ -34,40 +34,40 @@ body {
 }
 
 .signup {
-    font-size: 144px;
+    font-size: 60px;
     color:#f4f4f4;
     text-align: center;
 }
 
 #user {
-    font-size: 250px;
+    font-size: 120px;
     color:#f4f4f4;
     opacity: 1;
 }
 
 
 #email, #password, #name, #lastname{
-    width: 700px;
-    height: 90px;
+    width: 300px;
+    height: 30px;
     border-radius: 45px;
     background-color: #f4f4f4;
     color: #5F5F5F;
-    font-size: 60px;
+    font-size: 25px;
     text-align: center;
     border: none;
-    margin-top: 75px;
+    margin-top: 20px;
 }
 
 .boton-signup {
-    width: 440px;
-    height: 168px;
+    width: 200px;
+    height: 75px;
     background-color: #F19915;
-    border-radius: 60px;
+    border-radius: 28px;
     color: white;
     text-align: center;
     border: none;
-    margin-top: 90px;
-    font-size: 72px;
+    margin-top: 35px;
+    font-size: 37px;
 }
 
 
