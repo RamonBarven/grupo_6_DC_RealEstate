@@ -1,10 +1,25 @@
-html, body {
+body {
     max-width: 100%;
     overflow-x:hidden;
     background-color: #F4F4F4;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 15px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #005471;
+    border-radius: 5px;
 }
 
 * {
@@ -25,8 +40,8 @@ nav {
 }
 
 .logo {
-    width: 75px;
-    height: 75px;
+    width: 5em;
+    height: 5em;
 }
 
 .contenedorLogo {
@@ -129,21 +144,21 @@ header {
 .contenedor-casas {
     display: flex;
     width: 100%;
-    height: 75px;
+    height: 20vw;
     box-sizing: border-box;
     margin-top: 10px;
 }
 
 .contenedor-casas img {
     position: relative;
-    width: 133.75px;
+    width: 35.6vw;
     padding-right: 5px;
     height: 100%;
     box-sizing: border-box;
 }
 
 #cuatro, #cinco, #seis {
-    left: -15px;
+    left: -5vw;
 }
 
 .contenedor-datos{
@@ -228,7 +243,7 @@ header {
     width: 100%;
     height: 75px;
     z-index: -1;
-    transform: scale(1;);
+    transform: scale(1);
     top: 0;
     left: 0;
     transition: .5s;
@@ -283,12 +298,12 @@ header {
     .menu-lateral {
         top: 0px;
         height: 80px;
-        width: 95vw;
+        width: 90vw;
         display: flex;
         justify-content: space-around;
         align-items: center;
         background-color: rgba(0, 0, 0, 0);
-        left: 5vw;
+        left: 10vw;
     }
 
     .menu-lateral a {
