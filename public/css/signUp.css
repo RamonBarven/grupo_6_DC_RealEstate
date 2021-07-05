@@ -10,18 +10,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 .contenedor-todo  form{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.logo {
-    margin-top: 20px;
-    margin-left: 10px;
-    width: 100px;
-    height: 100px;
 }
 
 .contenedor-signup {
@@ -31,6 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .signup {
@@ -70,7 +67,14 @@ body {
     font-size: 37px;
 }
 
-@media (min-width:770px){
+@media (min-width:900px){
+    .contenedor-todo form{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        margin-top: 3%;
+    }
     .signup{
         font-size:80px;
     }
@@ -78,61 +82,42 @@ body {
         font-size: 200px;
     }
     .contenedor-signup {
-        width: 100%;
-        height: 100%;
-    }
-    .logo {
-        margin-top: 40px;
-        margin-left: 20px;
-        width: 150px;
-        height: 150px;
-    }
-    .contenedor-todo  form{
-        display:block;
-    
+        width: 80%;
+        height: 80%;
     }
 
-    #name{
-        position:relative;
-        left:200px;
-        height: 80px;
-        width: 500px;
-        font-size: 45px;
-    }
-        
-    #lastname{
-        position:relative;
-        left:360px;
-        height: 80px;
-        width: 500px;
-        font-size: 45px;
-    }
-
-    #email{
-        position:relative;
-        right:815px;
-        top:130px;
-        height: 80px;
-        width: 500px;
-        font-size: 45px;
-    }
-
-    #password{
-        position:relative;
-        left:868px;
-        height: 80px;
-        top:25px;
-        width: 500px;
-        font-size: 45px;
-    }
-    
     .boton-signup {
-        position:relative;
-        width: 450px;
-        height:80px;
-        font-size: 45px;
-        left:40px;
-        top:180px;
+        justify-self: center;
+        width: 330px;
+        margin-bottom: 10%;
     }
 
+    #email, #password, #name, #lastname{
+        height: 50px;
+        width: 350px;
+    }
+}
+
+@media (min-width:1252px){
+
+    #email, #password, #name, #lastname{
+        height: 70px;
+        width: 500px;
+        font-size: 30px;
+    }
+}
+
+@media (min-width:1674px){
+
+    #email, #password, #name, #lastname{
+        height: 90px;
+        width: 600px;
+        font-size: 45px;
+    }
+
+    .boton-signup {
+        width: 500px;
+        height: 90px;
+        font-size: 45px;
+    }
 }
