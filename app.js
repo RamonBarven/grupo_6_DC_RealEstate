@@ -9,6 +9,11 @@ app.listen(3000,()=>{
 });
 
 app.get('/', (req,res) => {
+    let htmlPath = path.resolve(__dirname,'./views/detalleProducto.html');
+    res.sendFile(htmlPath);
+} )
+
+app.get('/', (req,res) => {
     let htmlPath = path.resolve(__dirname,'./views/index.html');
     res.sendFile(htmlPath);
 } )
