@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/0e8470df2a.js" crossorigin="anonymous"></script>
         <link href="./css/favoritos.css" rel="stylesheet">
         <meta charset="UTF-8">
         <title>DCRealEstate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
     </head>
     <body> 
         <nav>
@@ -13,21 +16,34 @@
             <div class= "contenedorLogo">
                 <img class="logo" src="./img/logoDC.png">
             </div>
+            <div class="menu-lateral">
+                <a href="">Home</a>
+                <a href="">Buy</a>
+                <a href="">Rent</a>
+                <a href="">Contact</a>
+                <a href="">About us</a>
+                <a href="../views/favoritos.html"><i class="fas fa-heart" ></i><span id="Fav"> Favorites</span></a>
+                <a href=""><i class="fas fa-house-user"></i> My account</a>
+            </div>
         </nav>
         <header>
             <i id="corazon" class="fas fa-heart"></i>
-            <i class="favoritos">Your Favorites</i>
+            <h1 class="favoritos">Your Favorites</h1>
             <div class="linea"></div>
             
         </header>
         <main>
-            <i class="top">Top</i>
-            <div class="titulos" id="numero">#</div>
-            <div class="imagen" id="uno"></div>
-            <i class="titulos" id="location1">Location</i>
-            <p class="contenido" id=direccion1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <i class="titulos" id="price1">Price</i>
-            <p class="contenido" id=precio1>800 USD</p>
+            <h2 class="top">Top</h2>
+            <div class="contenedor-imagenInfo">
+                <h3 class="titulos" id="numero">#</h3>
+                <div class="imagen" id="uno"></div>
+                <div class="info">
+                    <h3 class="titulos" id="location1">Location</h3>
+                    <p class="contenido" id=direccion1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <h3 class="titulos" id="price1">Price</h3>
+                    <p class="contenido" id=precio1>800 USD</p>
+                </div>
+            </div>
             <i class="titulos" id="floors1">Floors:#</i>
             <i class="titulos" id="bedroom1">Bedroom:#</i>
             <i class="titulos" id="bathroom1">Bathroom:#</i>

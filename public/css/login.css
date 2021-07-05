@@ -5,6 +5,16 @@
 body {
     background-image: url('.././img/fondo-login.png');
     background-size: cover;
+    font-family: 'Amaranth', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #005471;
+    border-radius: 5px;
 }
 
 .contenedor-todo {
@@ -19,8 +29,8 @@ body {
 }
 
 .contenedor-login {
-    width: 340px;
-    height: 720px;
+    width: 90vw;
+    height: 193vw;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 75px;
     display: flex;
@@ -44,11 +54,12 @@ body {
     font-size: 36px;
     color: #005471;
     text-align: center;
+    margin: 20px 0px;
 }
 
 #email, #password {
-    width: 270px;
-    height: 55px;
+    width: 75vw;
+    height: 15vw;
     border-radius: 30px;
     background-color: #f4f4f4;
     color: #5F5F5F;
@@ -59,8 +70,8 @@ body {
 }
 
 .boton-login {
-    width: 220px;
-    height: 84px;
+    width: 60vw;
+    height: 22vw;
     background-color: #F19915;
     border-radius: 30px;
     color: white;
@@ -74,4 +85,63 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.contenedor-forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 770px) {
+
+    body {
+        background-image: url('.././img/fondo-login2.png');
+        background-size: cover;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .contenedor-login {
+        margin-top: 20px;
+        width: 1020px;
+        height: 670px;
+    }
+
+    .login {
+        font-size:  72px;
+        margin: 15px;
+    }
+
+    #user {
+        font-size: 175px;
+        margin: 22px;
+    }
+
+    .login-parrafo {
+        font-size: 40px;
+        width: 450px;
+        margin: 0;
+    }
+
+    .contenedor-forms {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #email, #password {
+        width: 396px;
+        height: 80px;
+        margin: 28px 30px;
+    }
+
+    .boton-login {
+        width: 314px;
+        height: 80px;
+        margin: 0;
+    }
 }
