@@ -83,16 +83,19 @@ nav {
 
 .imagen{
     position:absolute;
-    background-image: url(../img/favorito1.png);
     width: 430px;
     height: 380px;
-    top:450px;
     background-size:contain;
-    left:200px;
     background-repeat: no-repeat;
+    left:200px;
+    background-position: center;
+}
+.imagen#uno{
+    top:450px;
+    background-image: url(../img/favorito1.png);
 }
 
-.titulos#location{
+.titulos#location1{
     left:700px;
     top:435px;
 }
@@ -104,7 +107,7 @@ nav {
     margin: 0px;
 }
 
-.contenido#direccion{
+.contenido#direccion1{
     left:660px;
     top: 505px;
     width:300px;
@@ -113,12 +116,12 @@ nav {
     text-align:justify;
 }
 
-.titulos#price{
+.titulos#price1{
     left:750px;
     top:685px;
 }
 
-.contenido#precio{
+.contenido#precio1{
     left:660px;
     top: 760px;
     width:300px;
@@ -127,19 +130,19 @@ nav {
     font-size: 45px;
     font-weight: bold;
 }
-.titulos#floors{
+.titulos#floors1{
     left:200px;
     top:845px;
     font-size:40px;
 }
 
-.titulos#bedroom{
+.titulos#bedroom1{
     left:423px;
     top:845px;
     font-size:40px;
 }
 
-.titulos#bathroom{
+.titulos#bathroom1{
     left:700px;
     top:845px;
     font-size:40px;
@@ -165,11 +168,11 @@ nav {
     position:absolute;
     color: #0085D0;
 }
-.datos#telefono{
+.datos#telefono1{
     left:260px;
     top:920px;
 }
-.datos#correo{
+.datos#correo1{
     left:260px;
     top:985px;
 }
@@ -185,5 +188,101 @@ nav {
     font-style: normal;
     padding:15px;
     box-sizing: border-box;
-    
 }
+.boton#primero{
+    left:700px;
+    top:935px;
+}
+
+hr{
+    position:relative;
+    top:1020px;
+    color:black;
+    margin:30px;
+    border:2px solid black;   
+}
+
+.titulos#numero2{
+    top:1140px;
+    left:90px;
+}
+
+.imagen#dos{
+    top:1095px;
+    background-image: url(../img/Casa2.png);
+}
+
+.titulos#location2{
+    left:700px;
+    top:1080px;
+}
+
+.contenido#direccion2{
+    left:660px;
+    top: 1150px;
+    width:300px;
+    height:180px;
+    font-size:24px;
+    text-align:justify;
+}
+.titulos#price2{
+    left:750px;
+    top:1330px;
+}
+
+.contenido#precio2{
+    left:660px;
+    top: 1405px;
+    width:300px;
+    height:60px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+.titulos#floors2{
+    left:200px;
+    top:1490px;
+    font-size:40px;
+}
+
+.titulos#bedroom2{
+    left:423px;
+    top:1490px;
+    font-size:40px;
+}
+
+.titulos#bathroom2{
+    left:700px;
+    top:1490px;
+    font-size:40px;
+}
+
+#phone2{
+    left:200px;
+    top:1555px;
+    font-size:40px;
+    position:absolute;
+    color: #0085D0;
+}
+#mail2{
+    left:200px;
+    top:1620px;
+    font-size:40px;
+    position:absolute;
+    color: #0085D0;
+}
+
+.datos#telefono2{
+    left:260px;
+    top:1565px;
+}
+.datos#correo2{
+    left:260px;
+    top:1630px;
+}
+
+.boton#segundo{
+    left:700px;
+    top:1580px;
+}
+
