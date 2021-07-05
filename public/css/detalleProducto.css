@@ -1,23 +1,40 @@
 
 body {
+    max-width: 100%;
+    overflow-x:hidden;
     background-color: #F4F4F4;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 15px;
+    height: fit-content;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 nav {
+    position: fixed;
     background-color: #0085D0;
-    width: 100%;
+    width: 100vw;
     top: 0px;
-    height: 180px;
+    height: 90px;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    position: fixed;
-    left: -5px;
+    left: 0px;
+    z-index: 100;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 5em;
+    height: 5em;
 }
 
 .contenedorLogo {
@@ -27,12 +44,36 @@ nav {
     justify-content: center;    
 }
 
+#menu:hover ~ .menu-lateral{
+    transform: translateX(50vw);
+}
+
+.menu-lateral {
+    position: fixed;
+    background-color: #005471;
+    width: 50vw;
+    height: 500px;
+    left: -50vw;
+    top: 90px;
+    transition: .3s ease all;
+}
+
+
+.menu-lateral a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
 #menu {
     position: fixed;
-    font-size: 100px;
+    font-size: 50px;
     color: #F4F4F4;
-    left: 20px;
-    top: 40px;
+    left: 10px;
+    top: 20px;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -55,29 +96,42 @@ nav {
 .rectangulo {
     background-color: white;
     color: #005471;
-    left: 500px;
-    top: 220px;
-    border-radius: 60px;
-    width: 550px;
-    height: 150px;
+    left: 50%;
+    top: 10%;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    width: 50%;
+    height: 8%;
     box-sizing: border-box;
     padding: 0px 0;
     margin: 0px;
-    position: fixed;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+    
+.rentSale {
+    font-size: 3em;
+    /* text-align: center; */
+    padding: 2%;
+    /* margin-block-start: 2em; */
+    /* margin-left: 6em; */
+    margin: 0%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.rentSale {
-    font-size: 80px;
-    text-align: center;
-    padding: 30px;
-    margin: 0%;
+.detalle {
+    display: flex;
+    width: 100%;
 }
 
 .fotoPropiedad {
-    top: 400px;
+    top: 20%;
     width: 80%;
     display: flex;
-    position: fixed;
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -87,18 +141,18 @@ nav {
 
 .precio {
     display: flex;
-    align-items: center;
-    top: 1100px;
-    position: fixed;
-    text-align: center;
-    font-size: 80px;
-    left: 22%;
+    top: 60%;
+    position: absolute;
+    font-size: 3em;
     color: #007FC6;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .contenedorDescripcion {
-    top: 1300px;
-    position: fixed;
+    top: 700px;
+    position: absolute;
     width: 80%;
     left: 10%;
 }
@@ -117,11 +171,125 @@ nav {
 }
 
 .detallesRelevantes {
-    top: 1680px;
+    top: 1080px;
     justify-content: space-evenly;
-    position: fixed;
+    position: absolute;
     display: flex;
-    font-size: 65px;
+    font-size: 2em;
     width: 100%;
 }
+
+@media (min-width: 770px)  {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedorLogo {
+        justify-content: left;
+    }
+
+    .logo {
+        position: relative;
+        left: 20px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .menu-lateral {
+        top: 0px;
+        height: 80px;
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0);
+        left: 10vw;
+    }
+
+    .menu-lateral a {
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    #Fav {
+        display: none;
+    }
+
+    header{
+        display: block;
+        position: relative;
+        top: 90px;
+        width: 100vw;
+    }
+
+    .rectangulo {
+        background-color: white;
+        color: #005471;
+        left: 70%;
+        top: 10%;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px;
+        width: 30%;
+        height: 8%;
+        box-sizing: border-box;
+        padding: 0px 0;
+        margin: 0px;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+    }
+
+    .fotoPropiedad {
+    top: 20%;
+    width: 40%;
+    display: flex;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    left: 10%;
+    }
+    .contenedorDescripcion {
+        top: 22%;
+        position: absolute;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        left: 52%;
+    }
+        
+    .detalle {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+        
+    .precio {
+        display: flex;
+        top: 15%;
+        position: absolute;
+        font-size: 3em;
+        color: #007FC6;
+        align-items: center;
+        width: 50%;
+        justify-content: center;
+    }
+
+    .detallesRelevantes {
+        top: 62%;
+        position: absolute;
+        display: flex;
+        font-size: 3em;
+        width: 50%;
+        justify-content: space-around;
+        left: 50%;
+    }
+        
+}
+
 
