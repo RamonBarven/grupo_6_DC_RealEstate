@@ -47,11 +47,14 @@ nav {
     font-size: 60px;
     left:200px;
     position:absolute;
+    font-weight: bold;
+    font-style:normal;
+    width: 400px;
 }
 
 .linea{
     top:280px;
-    left:600px;
+    left:630px;
     border-bottom:14px #0085D0 solid;
     width:400px;
     position:absolute;
@@ -167,6 +170,8 @@ nav {
     font-size:30px;
     position:absolute;
     color: #0085D0;
+    width:420px ;
+    height: 100px;
 }
 .datos#telefono1{
     left:260px;
@@ -181,13 +186,14 @@ nav {
     position:absolute;
     color:#F4F4F4;
     background-color:#F19915;
-    left:700px;
-    top:935px;
-    border-radius: 60px;
+    border-radius: 40px;
     font-size: 45px;
     font-style: normal;
     padding:15px;
     box-sizing: border-box;
+    width: 240px;
+    height: 85px;
+    
 }
 .boton#primero{
     left:700px;
@@ -197,9 +203,9 @@ nav {
 hr{
     position:relative;
     top:1020px;
-    color:black;
     margin:30px;
-    border:2px solid black;   
+    border:2px solid #0085D0;
+    width: 900px; 
 }
 
 .titulos#numero2{
@@ -284,5 +290,9 @@ hr{
 .boton#segundo{
     left:700px;
     top:1580px;
+}
+
+@media (min-width:770){
+    
 }
 
