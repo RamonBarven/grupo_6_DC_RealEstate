@@ -3,9 +3,14 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-image: url('.././img/fondo-login.png');
     background-size: cover;
     font-family: 'Amaranth', sans-serif;
+    width: 100vw;
+    height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -21,16 +26,12 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.logo {
-    width: 75px;
-    height: 75px;
+    justify-content: center;
 }
 
 .contenedor-login {
     width: 90vw;
-    height: 193vw;
+    height: 93vh;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 75px;
     display: flex;
@@ -59,7 +60,7 @@ body::-webkit-scrollbar-thumb {
 
 #email, #password {
     width: 75vw;
-    height: 15vw;
+    height: 7vh;
     border-radius: 30px;
     background-color: #f4f4f4;
     color: #5F5F5F;
@@ -71,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 
 .boton-login {
     width: 60vw;
-    height: 22vw;
+    height: 7vh;
     background-color: #F19915;
     border-radius: 30px;
     color: white;
@@ -79,6 +80,13 @@ body::-webkit-scrollbar-thumb {
     border: none;
     margin-top: 20px;
     font-size: 36px;
+}
+
+.signup {
+    font-size: 22px;
+    color: #005471;
+    text-align: center;
+    margin: 20px 0px;
 }
 
 .contenedor-login form {
@@ -94,21 +102,11 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
-@media (min-width: 770px) {
+@media (min-width: 980px) {
 
     body {
         background-image: url('.././img/fondo-login2.png');
         background-size: cover;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .contenedor-login {
-        margin-top: 20px;
-        width: 1020px;
-        height: 670px;
     }
 
     .login {
@@ -143,5 +141,10 @@ body::-webkit-scrollbar-thumb {
         width: 314px;
         height: 80px;
         margin: 0;
+    }
+    
+    .signup {
+    font-size: 27px;
+    
     }
 }
