@@ -121,6 +121,12 @@ main {
     flex-direction: column;
 }
 
+.contenedor-casaTotal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
 .top{
     color:#0085D0;
     font-size: 32px;
@@ -197,6 +203,7 @@ main {
 .contenedor-datos{
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 .titulos#floors1{
     font-size: 18px;
@@ -281,7 +288,160 @@ hr{
 }
 
 
-@media (min-width:770){
+@media (min-width:770px){
     
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedorLogo {
+        justify-content: left;
+    }
+
+    .logo {
+        position: relative;
+        left: 20px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .menu-lateral {
+        top: 0px;
+        height: 80px;
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0);
+        left: 10vw;
+    }
+
+    .menu-lateral a {
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    #Fav {
+        display: none;
+    }
+
+    header {
+        flex-wrap: nowrap;
+        justify-content: left;
+        align-items: center;
+    }
+
+    #corazon {
+        font-size: 40px;
+        background-color: white;
+        left: 50px;
+        z-index: 1;
+    }
+
+    .favoritos {
+        font-size: 36px;
+        background-color: white;
+        width: 300px;
+        left: 70px;
+    }
+
+    .linea {
+        width: 70vw;
+        z-index: -1;
+        margin: 0;
+        top: 4px;
+    }
+
+    .top {
+        display: none;
+    }
+
+    .contenedor-casaTotal {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .titulos {
+        font-size: 36px;
+    }
+
+    .imagen {
+        width: 280px;
+        height: 170px;
+    }
+
+    .info {
+        width: 20vw;
+        align-items: flex-start;
+    }
+
+    .contenido#direccion1 {
+        text-align: left;
+    }
+
+    .titulos#numero {
+        left: 20px;
+    }
+
+    .contenido#precio1 {
+        font-size: 24px;
+    }
+
+    .contenedor-datos {
+        flex-direction: column;
+        align-items: flex-start;
+        left: 20px;
+    }
+
+    .contenedor-contacto {
+        flex-direction: column;
+        align-items: center;
+        left: 10vw;
+        width: auto;
+    }
+
+    .titulos#floors1{
+        font-size: 30px;
+    }
+    
+    .titulos#bedroom1{
+        font-size: 30px;
+    }
+    
+    .titulos#bathroom1{
+        font-size: 30px;
+    }
+
+    .telefono-mail {
+        align-items: center;
+    }
+    
+    .boton{
+        border-radius: 40px;
+        font-size: 40px;
+        width: 400px;
+        height: 70px;
+        padding: 9px;
+    }
+
+    #phone{
+        font-size:26px;
+        margin: 10px;
+    }
+    #mail{
+        font-size:26px;
+        margin: 10px;
+    }
+
+    .datos {
+        font-size: 24px;
+        margin: 10px;
+    }
+
 }
 
