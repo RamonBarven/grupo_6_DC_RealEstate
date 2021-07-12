@@ -1,14 +1,9 @@
-app.get('/login', (req,res) => {
-    let htmlPath = path.resolve(__dirname,'./views/login.html');
-    res.sendFile(htmlPath);
-} )
+let express=require('express');
+let router= express.Router();
+let usersController=require("../controllers/users/usersController");
 
-app.get('/favorites', (req,res) => {
-    let htmlPath = path.resolve(__dirname,'./views/favoritos.html');
-    res.sendFile(htmlPath);
-} )
+router.get('/login', usersController.login);
+router.get('/signup', usersController.signup);
+router.get('/favorites', usersController.favorites);
 
-app.get('/signup', (req,res) => {
-    let htmlPath = path.resolve(__dirname,'./views/signUp.html');
-    res.sendFile(htmlPath);
-} ) 
+module.exports=router;

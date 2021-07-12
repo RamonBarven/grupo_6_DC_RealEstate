@@ -1,5 +1,7 @@
+let express=require('express');
+let router= express.Router();
+let productController=require("../controllers/products/productController");
 
-app.get('/productdetail', (req,res) => {
-    let htmlPath = path.resolve(__dirname,'./views/detalleProducto.html');
-    res.sendFile(htmlPath);
-} ) 
+router.get('/detail', productController.detail);
+
+module.exports=router;
