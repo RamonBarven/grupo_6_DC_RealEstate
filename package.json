@@ -1,0 +1,25 @@
+{
+  "name": "grupo_6_DC_RealEstate",
+  "version": "1.0.0",
+  "description": "-Definir la temática del market place",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamonBarven/grupo_6_DC_RealEstate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamonBarven/grupo_6_DC_RealEstate/issues"
+  },
+  "homepage": "https://github.com/RamonBarven/grupo_6_DC_RealEstate#readme"
+}
