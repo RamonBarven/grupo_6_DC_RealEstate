@@ -96,11 +96,11 @@ nav {
 .rectangulo {
     background-color: white;
     color: #005471;
-    left: 50%;
-    top: 10%;
+    left: 35%;
+    top: 15%;
     border-top-left-radius: 60px;
     border-bottom-left-radius: 60px;
-    width: 50%;
+    width: 70%;
     height: 8%;
     box-sizing: border-box;
     padding: 0px 0;
@@ -128,7 +128,7 @@ nav {
 }
 
 .fotoPropiedad {
-    top: 20%;
+    top: 25%;
     width: 80%;
     display: flex;
     position: absolute;
@@ -141,7 +141,7 @@ nav {
 
 .precio {
     display: flex;
-    top: 60%;
+    top: 55%;
     position: absolute;
     font-size: 3em;
     color: #007FC6;
@@ -151,7 +151,7 @@ nav {
 }
 
 .contenedorDescripcion {
-    top: 700px;
+    top: 550px;
     position: absolute;
     width: 80%;
     left: 10%;
