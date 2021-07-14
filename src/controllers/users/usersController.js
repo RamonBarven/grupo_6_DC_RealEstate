@@ -1,10 +1,10 @@
 let usersController={
     login:function (req,res) {
-        res.render('login');},
+        res.render('user/login');},
     signup:function (req,res) {
-        res.render('signUp');},
+        res.render('user/signUp');},
     favorites:function (req,res) {
-        res.render('favoritos');}    
+        res.render('user/favoritos');}    
 
 };
 

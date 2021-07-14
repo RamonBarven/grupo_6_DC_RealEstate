@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/0e8470df2a.js" crossorigin="anonymous"></script>
-        <link href="./css/favoritos.css" rel="stylesheet">
-        <meta charset="UTF-8">
-        <title>DCRealEstate</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+<%-include('.././partials/head')%>
+        <link href="./css/favoritos.css" rel="stylesheet"> 
     </head>
     <body> 
-        <nav>
-            <i id="menu" class="fas fa-bars"></i>
-            <div class= "contenedorLogo">
-                <img class="logo" src="./img/logoDC.png">
-            </div>
-            <div class="menu-lateral">
-                <a href="/home">Home</a>
-                <a href="">Buy</a>
-                <a href="">Rent</a>
-                <a href="">Contact</a>
-                <a href="">About us</a>
-                <a href="/favorites"><i class="fas fa-heart" ></i><span id="Fav"> Favorites</span></a>
-                <a href="/login"><i class="fas fa-house-user"></i> My account</a>
-            </div>
-        </nav>
+        <%-include('.././partials/nav')%>
         <header>
             <i id="corazon" class="fas fa-heart"></i>
             <h1 class="favoritos">Your Favorites</h1>
@@ -45,12 +22,12 @@
                         <p class="contenido" id=precio1>800 USD</p>
                     </div>
                 </div>
-                <div class="contenedor-datos">
+                <div class="contenedor-datosUno">
                     <h3 class="titulos" id="floors1">Floors:#</h3>
                     <h3 class="titulos" id="bedroom1">Bedroom:#</h3>
                     <h3 class="titulos" id="bathroom1">Bathroom:#</h3>
                 </div>
-                <div class="contenedor-contacto">
+                <div class="contenedor-contactoUno">
                     <div class="telefono-mail">
                         <div class="telefono-mail2">
                             <i id="phone" class="fas fa-phone-alt"></i>
@@ -77,12 +54,12 @@
                         <p class="contenido" id=precio1>800 USD</p>
                     </div>
                 </div>
-                <div class="contenedor-datos">
+                <div class="contenedor-datosUno">
                     <h3 class="titulos" id="floors1">Floors:#</h3>
                     <h3 class="titulos" id="bedroom1">Bedroom:#</h3>
                     <h3 class="titulos" id="bathroom1">Bathroom:#</h3>
                 </div>
-                <div class="contenedor-contacto">
+                <div class="contenedor-contactoUno">
                     <div class="telefono-mail">
                         <div class="telefono-mail2">
                             <i id="phone" class="fas fa-phone-alt"></i>
@@ -109,12 +86,12 @@
                         <p class="contenido" id=precio1>800 USD</p>
                     </div>
                 </div>
-                <div class="contenedor-datos">
+                <div class="contenedor-datosUno">
                     <h3 class="titulos" id="floors1">Floors:#</h3>
                     <h3 class="titulos" id="bedroom1">Bedroom:#</h3>
                     <h3 class="titulos" id="bathroom1">Bathroom:#</h3>
                 </div>
-                <div class="contenedor-contacto">
+                <div class="contenedor-contactoUno">
                     <div class="telefono-mail">
                         <div class="telefono-mail2">
                             <i id="phone" class="fas fa-phone-alt"></i>
@@ -129,5 +106,6 @@
                 </div>
             </div>
         </main>
+        <%-include('.././partials/footer')%>
     </body>
 </html>

@@ -1,32 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">
-        <script src="https://kit.fontawesome.com/0e8470df2a.js" crossorigin="anonymous"></script>
-        <link href="./css/index.css" rel="stylesheet">
-        <meta charset="UTF-8">
-        <title>DCRealEstate</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
-    </head>
+
+    <%-include('./partials/head')%>
+    <link href="./css/index.css" rel="stylesheet">
+</head>
     <body>
-        <nav>
-            <i id="menu" class="fas fa-bars"></i>
-            <div class= "contenedorLogo">
-                <img class="logo" src="./img/logoDC.png">
-            </div>
-            <div class="menu-lateral">
-                <a href="/home">Home</a>
-                <a href="">Buy</a>
-                <a href="">Rent</a>
-                <a href="">Contact</a>
-                <a href="">About us</a>
-                <a href="/favorites"><i class="fas fa-heart" ></i><span id="Fav"> Favorites</span></a>
-                <a href="/login"><i class="fas fa-house-user"></i> My account</a>
-            </div>
-        </nav>
+        <%-include('./partials/nav')%>
         <header>
             <form>
                 <label for="search">
@@ -48,24 +25,7 @@
                 <img id="cinco" src="./img/Casa2.png">
                 <img id="seis" src="./img/Casa1.png">
             </div>
-
-            <div class="contenedor-datos">
-                <div class="contenedor-contacto">
-                    <div class="imagen-contacto">
-                        <h3>Contact</h3>
-                        <img  src="./img/Denise1.png" id="vertical">
-                        <img  src="./img/Denise2.png" id="horizontal">
-                    </div>
-                    <p>Lorem ipsum <br>dolor sit amet, <br>consectetur <br>adipiscing elit. 
-                </div>
-                <div class="contenedor-social">
-                    <ul class="social-icons">
-                        <li><a href="https://es-la.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
         </section>
-        
+        <%-include('./partials/footer')%>
     </body>
 </html>

@@ -177,7 +177,7 @@ header {
 }
 
 .imagen-contacto h3 {
-    color: #007FC6;
+    color: #F4F4F4;
     font-size: 25px;
     margin-left: 10px;
 }
@@ -203,6 +203,7 @@ header {
     font-size: 15px;
     margin-top: 70px;
     margin-left: 5px;
+    color: #F4F4F4;
 }
 
 .social-icons {
@@ -273,6 +274,17 @@ header {
     background: #fff;
     border: 2px dashed #e4405f;
     color: #e4405f;
+}
+
+footer {
+    background-color: #005471;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin-top: 0px;
+    position: relative;
+    margin: 0;
+    top: 10px;
 }
 
 @media (min-width: 770px)  {
@@ -381,8 +393,8 @@ header {
 
     .imagen-contacto  h3{
         position: relative;
-        left: 260px;
-        top: 30px;
+        left: 140px;
+        top: 15px;
     } 
 
     #vertical {
@@ -390,18 +402,19 @@ header {
     }
 
     #horizontal {
-        width: 260px;
-        height: 186px;
+        width: 130px;
+        height: 93px;
         box-sizing: border-box;
         position: relative;  
         display: block;
-        top: -20px;
+        top: -40px;
     }
 
     .contenedor-datos p {
-        font-size: 25px;
-        margin-top: 90px;
+        font-size: 20px;
+        margin-top: 70px;
         margin-left: 15px;
+        width: 210px;
     }
 
     .social-icons {
@@ -411,16 +424,18 @@ header {
     }
 
     .social-icons li a {
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        font-size: 3em;
-        margin-bottom: 20px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.5em;
+        margin-bottom: 10px;
     }
 
     .social-icons li a::before {
-        height: 100px;
+        height: 50px;
     }
 
-
+    footer {
+        top: 130px;
+    }
 }
