@@ -1,0 +1,83 @@
+<%-include('.././partials/head')%>
+        <link href="./css/addProduct.css" rel="stylesheet">
+    </head>
+    <body>
+        <%-include('.././partials/nav')%>
+    
+    <main>  
+        <section class="contenedorIzquierda">
+            <div class=detalleImagen>
+                <form class="formImagen">
+                    <label for="image">
+                        <input type="file" name="image" id="image" accept="image/*">
+                    </label>
+                </form>
+            </div>
+            
+        </section>
+
+    <div class="contenedorDerecho">
+        <section class="rectangulo">
+            <form class="saleRent">
+                <input type="radio" name="saleRent" id="sale" value="sale">
+                <label class= "sale" for="sale">Sale</label>
+                <span>/</span>
+                <input type="radio" name="saleRent" id="rent" value="rent">
+                <label class="sale" for="rent">Rent</label>
+            </form>
+        </section>  
+        
+        <section>
+            <div class="precio">
+                <form>
+                    <label for="price"><i class="fas fa-tags"></i>
+                        <input type="text" name="price" id="price" placeholder="$Price">
+                    </label>
+                </form>
+            </div>
+        </section>
+
+        <section class="contenedorDescripcion">
+            <form>
+                <label class="descripcionTitulo" for="description">Description<br>
+                    <textarea name="description" id="description" placeholder="Insert the description here."></textarea>
+                </label>
+        </section>
+    </div>
+    <div class="contenedorAbajo">
+        <section class="detallesRelevantes">  
+            <form>
+                    <div class="location">
+                        <label class="miniTitulos" for="location">Location<br>
+                            <input type="text" name="location" id="location" placeholder="Insert address here.">
+                        </label>
+                    </div>
+                <div class="sqft">
+                    <label class="miniTitulos" for="sqft">Sqft<br>
+                        <input type="number" name="sqft" id="sqft" placeholder="##">
+                    </label>
+                </div>
+                <div class="floors">
+                    <label class="miniTitulos" for="floors">Floors<br>
+                        <input type="number" name="floore" id="floors" placeholder="##">
+                    </label>
+                </div>
+                <div class="beds">
+                    <label class="miniTitulos" for="beds">Beds<br>
+                        <input type="number" name="beds" id="beds" placeholder="##">
+                    </label>
+                </div>
+                <div class="baths">
+                    <label class="miniTitulos" for="baths">Baths<br>
+                        <input type="number" name="baths" id="baths" placeholder="##">
+                    </label>
+                </div>
+            </form>
+        </section>
+
+    </div>
+    <button type="submit">submit</button>
+    </main>    
+        <%-include('.././partials/footer')%>
+    </body>
+</html>
