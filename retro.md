@@ -12,3 +12,4 @@ Retro Sprint 2.
 3. Continuar haciendo: Mantener organización de equipo por medio del grupo de Whatsapp.
 4. Hacer menos: Cuando son las reuniones por Zoom, platicar menos con el fin de ser más eficientes.
 5. Dejar hacer: No atrasarnos.
+
