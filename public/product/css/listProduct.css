@@ -225,6 +225,8 @@ main {
     font-weight: bold;
 }
 
+
+
 .contenedor-datosUno{
     display: flex;
     justify-content: space-around;
@@ -274,16 +276,38 @@ main {
 }
 
 .telefono-mail{
-    display: flex;
-    flex-direction: column;
     overflow: visible;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
-.telefono-mail2{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: visible;
+
+#favo{
+    text-align: center;
+    margin-left: 1%;
+    -webkit-text-stroke: 2px black;
+    color:transparent;
+}
+
+#favo:hover{
+    color:red;
+}
+
+.blue:active ~ p.perm {
+    transition: color 0s;}
+
+button{
+    border:none;
+    background-color: white;
+    font-size: 18px;
+    width:100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.titulo-boton{
+    text-decoration: underline #F19915;
+    font-family: 'Amaranth', sans-serif;
 }
 
 .boton{
@@ -298,6 +322,7 @@ main {
     height: 30px;
     
 }
+
 
 hr{
     position:relative;
@@ -501,7 +526,7 @@ footer {
     }
 
     .top {
-        width: 100%;
+        max-width: 100%;
     }
 
     .contenedor-casaTotal {
@@ -549,6 +574,10 @@ footer {
         width: auto;
     }
 
+    button{
+        font-size: 40px;
+    }
+
     .titulos#floors1{
         font-size: 30px;
     }
@@ -563,6 +592,7 @@ footer {
 
     .telefono-mail {
         align-items: center;
+        width: 100%;
     }
     
     .boton{
