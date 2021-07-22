@@ -4,48 +4,49 @@
     <body>
         <%-include('.././partials/nav')%>
     
-    <main>  
+    <main>
+    <form>     
         <section class="contenedorIzquierda">
             <div class=detalleImagen>
-                <form class="formImagen">
+                <div class="formImagen">
                     <label for="image">
                         <input type="file" name="image" id="image" accept="image/*">
                     </label>
-                </form>
+                </div>
             </div>
             
         </section>
 
-    <div class="contenedorDerecho">
+    <section class="contenedorDerecho">
         <section class="rectangulo">
-            <form class="saleRent">
+            <div class="saleRent">
                 <input type="radio" name="saleRent" id="sale" value="sale">
                 <label class= "sale" for="sale">Sale</label>
                 <span>/</span>
                 <input type="radio" name="saleRent" id="rent" value="rent">
                 <label class="sale" for="rent">Rent</label>
-            </form>
+            </div>
         </section>  
         <section>
             <div class="precio">
-                <form>
+                <div>
                     <label for="price"><i class="fas fa-tags"></i>
                         <input type="text" name="price" id="price" placeholder="$Price">
                     </label>
-                </form>
+                </div>
             </div>
         </section>
 
         <section class="contenedorDescripcion">
-            <form>
+            <div>
                 <label class="descripcionTitulo" for="description">Description<br>
                     <textarea name="description" id="description" placeholder="Insert the description here."></textarea>
                 </label>
+            </div>
         </section>
-    </div>
+    </section>
     <div class="contenedorAbajo">
         <section class="detallesRelevantes">  
-            <form>
                     <div class="location">
                         <label class="miniTitulos" for="location">Location<br>
                             <input type="text" name="location" id="location" placeholder="Insert address here.">
@@ -71,11 +72,13 @@
                         <input type="number" name="baths" id="baths" placeholder="##">
                     </label>
                 </div>
-            </form>
         </section>
-
     </div>
-    <button type="submit">submit</button>
+    <div>
+        <button type="submit">submit</button>
+    </div>
+    </form>
+
     </main>    
         <%-include('.././partials/footer')%>
     </body>
