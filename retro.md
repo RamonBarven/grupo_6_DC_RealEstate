@@ -8,8 +8,14 @@ Retro Sprint 1.
 
 Retro Sprint 2.
 1. Comenzar a hacer: El sprint con tiempo.
-2. Hacer más: Más juntas diarias para verificar qué está pasando con el avance del srpint.
+2. Hacer más: Más juntas diarias para verificar qué está pasando con el avance del sprint.
 3. Continuar haciendo: Mantener organización de equipo por medio del grupo de Whatsapp.
 4. Hacer menos: Cuando son las reuniones por Zoom, platicar menos con el fin de ser más eficientes.
 5. Dejar hacer: No atrasarnos.
 
+Retro Sprint 3.
+1. Comenzar a hacer: Acabar sprint a tiempo.
+2. Hacer más: Comunicación por el grupo de Whatsapp.
+3. Continuar haciendo: Juntas para avanzar el sprint por medio de Google meets, pues el tiempo es ilimitado en esta plataforma.
+4. Hacer menos: Plática durante las reuniones en Google Meets.
+5. Dejar hacer: No atrasarnos.
