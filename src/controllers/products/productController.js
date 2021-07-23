@@ -24,10 +24,9 @@ let productController={
 
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
-        let todojson=JSON.stringify(datosjson.push(productos));
+        datosjson.push(productos);
+        let todojson=JSON.stringify(datosjson, null, 4);
         fs.writeFileSync("data/product.json", todojson);
-        console.log(productos);
-
         res.redirect('/product');
     }
 };
