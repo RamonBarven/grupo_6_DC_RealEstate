@@ -20,5 +20,17 @@
         "floors": "2",
         "beds": "6",
         "baths": "5"
+    },
+    {
+        "id": 1627092234556,
+        "image": "",
+        "category": "Sale",
+        "price": "123",
+        "description": "wadas",
+        "location": "sdas",
+        "sqft": "2",
+        "floors": "4",
+        "beds": "5",
+        "baths": "3"
     }
 ]
