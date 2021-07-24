@@ -5,47 +5,47 @@
         <%-include('.././partials/nav')%>
         <header>
             <section class="rectangulo">
-                <h3 class="rentSale">Sale/Rent</h3>
+                <h3 class="rentSale"><%= datosjson[id].category %></h3>
             </section>    
         </header>
           
         <main>
             <section class="contenedor-izquierda">
                 <div class=detalleImagen>
-                    <img class="fotoPropiedad" src="./img/fotoPropiedad.png">
+                    <img class="fotoPropiedad" src="<%= datosjson[id].image %>">
                 </div>
                 <div class="contenedor-location">
                     <h3 class="location">Location</h3>
-                    <p class="location-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros nibh, commodo eu lobortis nec, pulvinar eget risus</p>
+                    <p class="location-text"><%= datosjson[id].location %></p>
                 </div>
             </section>
     
             <section class="contenedor-derecha">
                 <div class="precio">
                     <i class="fas fa-tags"></i>
-                    <h2 class="cantidadPrecio">  $999,999</h2>
+                    <h2 class="cantidadPrecio"><%= datosjson[id].price %></h2>
                 </div>
                 <h3 class="descripcionTitulo">Description</h3>
-                <p class="textoDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros nibh, commodo eu lobortis nec, pulvinar eget risus. Sed egestas congue pretium. Ut eget sapien vehicula, iaculis augue quis, cursus sapien.</p>
+                <p class="textoDescripcion"><%= datosjson[id].description %></p>
                 <form action="">
                     <button type="submit" class="add-favorites">Add to Favorites</button>
                 </form>
                 <div class="detallesRelevantes">
                     <div class="sqft">
                         <h4 class="miniTitulos">Sqft</h4>
-                        <p class="miniDescripcion">XX</p>
+                        <p class="miniDescripcion"><%= datosjson[id].sqft %></p>
                     </div>
                     <div class="floors">
                         <h4 class="miniTitulos">Floors</h4>
-                        <p class="miniDescripcion">XX</p>
+                        <p class="miniDescripcion"><%= datosjson[id].floors %></p>
                     </div>
                     <div class="beds">
                         <h4 class="miniTitulos">Beds</h4>
-                        <p class="miniDescripcion">XX</p>
+                        <p class="miniDescripcion"><%= datosjson[id].beds %></p>
                     </div>
                     <div class="baths">
                         <h4 class="miniTitulos">Baths</h4>
-                        <p class="miniDescripcion">XX</p>
+                        <p class="miniDescripcion"><%= datosjson[id].baths %></p>
                     </div>
                 </div>
             </section>

@@ -1,2 +1,24 @@
 [
+    {
+        "id": 7,
+        "category": "Sale",
+        "price": "6000",
+        "description": "",
+        "location": "Un lugar",
+        "sqft": "32",
+        "floors": "2",
+        "beds": "2",
+        "baths": "2"
+    },
+    {
+        "id": 7,
+        "category": "Sale",
+        "price": "7000",
+        "description": "",
+        "location": "Un lugar",
+        "sqft": "48",
+        "floors": "2",
+        "beds": "6",
+        "baths": "5"
+    }
 ]
