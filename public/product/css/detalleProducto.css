@@ -11,6 +11,15 @@ body {
     height: fit-content;
 }
 
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #005471;
+    border-radius: 5px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -56,13 +65,26 @@ nav {
 }
 
 
-.menu-lateral a {
+.enlaces {
     display: block;
     color: white;
     text-decoration: none;
     margin-left: 10px;
     margin-top: 30px;
     font-size: 20px;
+}
+
+.enlaces::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: .5s ease all;
+}
+
+.enlaces:hover::after{
+    width: 100%;
 }
 
 #menu {

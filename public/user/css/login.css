@@ -83,6 +83,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 36px;
 }
 
+.boton-login:hover{
+    background-color: #005471;
+}
+
 .signup {
     font-size: 22px;
     color: white;

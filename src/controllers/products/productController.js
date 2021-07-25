@@ -25,7 +25,7 @@ let productController={
         floors:req.body.floors,
         beds:req.body.beds,
         baths:req.body.baths,
-        }
+        };
 
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
