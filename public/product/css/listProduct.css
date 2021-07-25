@@ -132,7 +132,7 @@ nav {
 }
 
 .search:focus{
-    width: 50vw;
+    width: 75vw;
     background-image: none;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid black;
@@ -153,7 +153,7 @@ nav {
 
 .search:focus ~ .search-boton{
     z-index: 2;
-    margin-right: 47vw;
+    margin-right: 62vw;
     color: black;
 }
 
@@ -565,6 +565,14 @@ footer {
 
     .top {
         max-width: 100%;
+    }
+
+    .search:focus{
+        width: 50vw;
+    }
+
+    .search:focus ~ .search-boton{
+        margin-right: 47vw;
     }
 
     .contenedor-casaTotal {
