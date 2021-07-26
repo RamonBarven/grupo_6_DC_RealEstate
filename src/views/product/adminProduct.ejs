@@ -1,5 +1,5 @@
 <%-include('.././partials/head')%>
-        <link href="./css/listProduct.css" rel="stylesheet"> 
+        <link href="./css/adminProduct.css" rel="stylesheet"> 
     </head>
     <body> 
         <%-include('.././partials/nav')%>
@@ -26,14 +26,14 @@
                     <h3 class="titulos" id="bedroom1">Bedroom: <span class="numero"><%= datosjson[i].beds %></span></h3>
                     <h3 class="titulos" id="bathroom1">Bathroom: <span class="numero"><%= datosjson[i].baths %></span></h3>
                 </div>
-                <div class="contenedor-contactoUno">
-                    <div class="telefono-mail">
+                <div class="contenedor-admin">
+                    <div  class="boton" id="edit"><a href="/product/>" class="detail"><i class="far fa-edit"></i> Edit</a></div>
+                    <div class="delete">
                         <form >
-                            <button type="submit"><p class=titulo-boton>Add to favorites<i class="fas fa-heart" id="favo"></i></p>
+                            <button type="submit" class="boton"><i class="far fa-trash-alt"></i> Delete
                             </button>
                         </form>
                     </div>
-                    <div  class="boton" id="primero"><a href="/product/<%= i+1 %>" class="detail">View details</a></div>
                 </div>
             </div>
             <hr>

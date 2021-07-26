@@ -281,7 +281,7 @@ main {
     font-size: 18px;
 }
 
-.contenedor-contactoUno{
+.contenedor-admin{
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -360,8 +360,9 @@ button{
     border-radius: 40px;
     font-size: 18px;
     width: 127px;
-    height: 30px;
-    
+    height: 30px; 
+    font-family: 'Amaranth', sans-serif;
+    cursor: pointer;
 }
 
 .detail {
@@ -626,7 +627,7 @@ footer {
         left: 20px;
     }
 
-    .contenedor-contactoUno {
+    .contenedor-admin {
         flex-direction: column;
         align-items: center;
         left: 10vw;
@@ -656,10 +657,11 @@ footer {
     
     .boton{
         border-radius: 40px;
-        font-size: 40px;
-        width: 400px;
-        height: 70px;
-        padding: 9px;
+        font-size: 36px;
+        width: 300px;
+        margin: 0 0 10px 100px;
+        height: 50px;
+        padding: 2px;
     }
 
     #phone{

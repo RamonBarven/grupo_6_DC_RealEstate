@@ -32,5 +32,17 @@
         "floors": "4",
         "beds": "5",
         "baths": "3"
+    },
+    {
+        "id": 1627320714567,
+        "image": "",
+        "category": "Rent",
+        "price": "8000",
+        "description": "Aqui vive Biden",
+        "location": "1600 Pennsylvania Avenue NW, Washington, DC 20500, Estados Unidos",
+        "sqft": "3000",
+        "floors": "19",
+        "beds": "16",
+        "baths": "21"
     }
 ]

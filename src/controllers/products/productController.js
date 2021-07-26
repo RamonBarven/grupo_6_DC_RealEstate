@@ -12,7 +12,11 @@ let productController={
     add:function (req,res) {
         res.render('product/addProduct')},
     list:function(req,res){
-        res.render('product/listProduct')},
+        let id = req.params.id-1;
+        let datos=fs.readFileSync("data/product.json","utf-8");
+        let datosjson=JSON.parse(datos);
+        res.render('product/listProduct', {datosjson: datosjson, id: id})
+    },
     addpost:function(req,res){
         let productos={         
         id: Date.now(),
@@ -33,7 +37,14 @@ let productController={
         let todojson=JSON.stringify(datosjson, null, 4);
         fs.writeFileSync("data/product.json", todojson);
         res.redirect('/product');
-    }
+    },
+
+    admin: function(req, res) {
+        let id = req.params.id-1;
+        let datos=fs.readFileSync("data/product.json","utf-8");
+        let datosjson=JSON.parse(datos);
+        res.render('product/adminProduct', {datosjson: datosjson, id: id});
+    },
 };
 
 module.exports= productController;
