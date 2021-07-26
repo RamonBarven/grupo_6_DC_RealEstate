@@ -1,14 +1,15 @@
 [
     {
         "id": 7,
-        "category": "Sale",
-        "price": "6000",
-        "description": "",
-        "location": "Un lugar",
-        "sqft": "32",
-        "floors": "2",
-        "beds": "2",
-        "baths": "2"
+        "category": "Rent",
+        "price": "10000",
+        "description": "Funciona por favor",
+        "location": "Una playa",
+        "sqft": "68",
+        "floors": "-4",
+        "beds": "4",
+        "baths": "4",
+        "image": ""
     },
     {
         "id": 7,
@@ -38,11 +39,11 @@
         "image": "",
         "category": "Rent",
         "price": "8000",
-        "description": "Aqui vive Biden",
-        "location": "1600 Pennsylvania Avenue NW, Washington, DC 20500, Estados Unidos",
-        "sqft": "3000",
+        "description": "Aqui vive Biden y su esposa ya no quiere",
+        "location": "Su gatito 1600 Pennsylvania Avenue NW, Washington, DC 20500, Estados Unidos",
+        "sqft": "5000",
         "floors": "19",
-        "beds": "16",
-        "baths": "21"
+        "beds": "20",
+        "baths": "15"
     }
 ]

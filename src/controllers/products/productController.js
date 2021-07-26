@@ -54,19 +54,19 @@ let productController={
     },
 
     editput: function(req,res){
-        let id = req.params.id-1;
+        let id = req.params.id;
+        console.log(req.params.id);
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
-        /*datosjson[id].image=req.body.image;*/
+        datosjson[id].image=req.body.image;
         datosjson[id].category=req.body.category;
         datosjson[id].price=req.body.price;
         datosjson[id].description=req.body.description;
         datosjson[id].location=req.body.location;
-        datosjson[id].sqft=req.body.sqft;
         datosjson[id].floors=req.body.floors;
-        datosjson[id].beds=req.body.beds;
+        datosjson[id].sqft=req.body.sqft;
         datosjson[id].baths=req.body.baths;
-
+        datosjson[id].beds=req.body.beds;
         let todojson=JSON.stringify(datosjson, null, 4);
         fs.writeFileSync("data/product.json", todojson);
         res.redirect('/product/admin');
