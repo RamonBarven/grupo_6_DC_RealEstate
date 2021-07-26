@@ -1,11 +1,11 @@
 <%-include('../partials/head')%>
-        <link href="./css/addProduct.css" rel="stylesheet">
+        <link href="./css/editProduct.css" rel="stylesheet">
     </head>
     <body>
         <%-include('../partials/nav')%>
     
     <main>
-    <form method="POST" action="/product/add">     
+    <form method="POST" action="/product/edit/:id?_method=PUT">     
         <section class="contenedorIzquierda">
             <div class=detalleImagen>
                 <div class="formImagen">
@@ -20,18 +20,28 @@
     <section class="contenedorDerecho">
         <section class="rectangulo">
             <div class="saleRent">
-                <input type="radio" name="category" id="sale" value="Sale">
+                <% if (datosjson[id].category==="Sale"){%>
+                <input type="radio" name="category" id="sale" value="Sale" checked>
                 <label class= "sale" for="sale">Sale</label>
                 <span>/</span>
                 <input type="radio" name="category" id="rent" value="Rent">
                 <label class="sale" for="rent">Rent</label>
+
+                <%}else{%>
+                <input type="radio" name="category" id="sale" value="Sale" >
+                <label class= "sale" for="sale">Sale</label>
+                <span>/</span>
+                <input type="radio" name="category" id="rent" value="Rent" checked>
+                <label class="sale" for="rent">Rent</label>
+                <%}%>
+                
             </div>
         </section>  
         <section>
             <div class="precio">
                 <div>
                     <label for="price"><i class="fas fa-tags"></i>
-                        <input type="text" name="price" id="price" placeholder="$Price">
+                        <input type="text" name="price" id="price" placeholder="$Price" value="<%= datosjson[id].price %>">
                     </label>
                 </div>
             </div>
@@ -40,7 +50,7 @@
         <section class="contenedorDescripcion">
             <div>
                 <label class="descripcionTitulo" for="description">Description<br>
-                    <textarea name="description" id="description" placeholder="Insert the description here."></textarea>
+                    <textarea name="description" id="description" placeholder="Insert the description here." ><%= datosjson[id].description %></textarea>
                 </label>
             </div>
         </section>
@@ -49,27 +59,27 @@
         <section class="detallesRelevantes">  
                     <div class="location">
                         <label class="miniTitulos" for="location">Location<br>
-                            <input type="text" name="location" id="location" placeholder="Insert address here.">
+                            <input type="text" name="location" id="location" placeholder="Insert address here." value="<%= datosjson[id].location %>">
                         </label>
                     </div>
                 <div class="sqft">
                     <label class="miniTitulos" for="sqft">Sqft<br>
-                        <input type="number" name="sqft" id="sqft" placeholder="##">
+                        <input type="number" name="sqft" id="sqft" placeholder="##" value="<%= datosjson[id].sqft %>">
                     </label>
                 </div>
                 <div class="floors">
                     <label class="miniTitulos" for="floors">Floors<br>
-                        <input type="number" name="floors" id="floors" placeholder="##">
+                        <input type="number" name="floors" id="floors" placeholder="##" value="<%= datosjson[id].floors %>">
                     </label>
                 </div>
                 <div class="beds">
                     <label class="miniTitulos" for="beds">Beds<br>
-                        <input type="number" name="beds" id="beds" placeholder="##">
+                        <input type="number" name="beds" id="beds" placeholder="##" value="<%= datosjson[id].beds%>">
                     </label>
                 </div>
                 <div class="baths">
                     <label class="miniTitulos" for="baths">Baths<br>
-                        <input type="number" name="baths" id="baths" placeholder="##">
+                        <input type="number" name="baths" id="baths" placeholder="##" value="<%= datosjson[id].baths %>">
                     </label>
                 </div>
         </section>

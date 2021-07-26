@@ -1,0 +1,739 @@
+
+body {
+    max-width: 100%;
+    background-color: #F4F4F4;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 15px;
+    height: fit-content;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #005471;
+    border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*Navbar*/
+
+nav {
+    position: fixed;
+    background-color: #0085D0;
+    width: 100vw;
+    top: 0px;
+    height: 90px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+.logo {
+    width: 5em;
+    height: 5em;
+}
+
+.contenedorLogo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+#menu:hover ~ .menu-lateral{
+    transform: translateX(50vw);
+}
+
+.menu-lateral {
+    position: fixed;
+    background-color: #005471;
+    width: 50vw;
+    height: 500px;
+    left: -50vw;
+    top: 90px;
+    transition: .3s ease all;
+}
+
+
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.enlaces::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: .5s ease all;
+}
+
+.enlaces:hover::after{
+    width: 100%;
+}
+
+.my-account {
+    margin: 0;
+}
+
+#menu {
+    position: fixed;
+    font-size: 50px;
+    color: #F4F4F4;
+    left: 10px;
+    top: 20px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contenedor-buscador {
+    
+    top: 180px;
+    box-sizing: border-box;
+    width: 1087px;
+    height: 320px;
+}
+
+.back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/*Contenido de la pagina*/
+
+main {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorIzquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85vw;
+}
+
+.formImagen {
+    background: gray;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    align-content: center;
+    margin-left: 15px;
+}
+
+.formImagen label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.formImagen label input {
+    margin-left: 5%;
+    font-size: 12px;
+    color: #F4F4F4;
+    background:none;
+    border-bottom: none;
+}
+
+.contenedorDerecho {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rectangulo {
+    background-color: white;
+    color: #005471;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    width: 40vw;
+    height: 7%;
+    box-sizing: border-box;
+    padding: 0px 0;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+span {
+    font-size: 16pxpx;
+}
+
+.saleRent input {
+    display: none;
+}
+
+.saleRent label {
+    opacity: .5;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.saleRent input:checked + .sale {
+    opacity: 1;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.saleRent input:checked + .rent {
+    opacity: 1;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.precio {
+    display: flex;
+    font-size: 1em;
+    color: #007FC6;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.precio div {
+    text-align: center;
+} 
+
+.precio div label input {
+    font-size: 32px;
+    width: 50%;
+}
+
+.contenedorDescripcion {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contenedorDescripcion div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.descripcionTitulo {
+    text-align: left;
+    font-size: 65px;
+    margin-bottom: 0px;
+
+}
+
+.textoDescripcion {
+    text-align: left;
+    width: 100%;
+    font-size: 30px;
+}
+
+.contenedorDescripcion div label {
+    width: 100%;
+    text-align: center;
+}
+
+.contenedorDescripcion div label textarea {
+    width: 85%;
+    height: 100px;
+    text-align: center;
+    margin-top: 10px;
+    border: none;
+    max-width: 85%;
+    min-width: 85%;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.contenedorAbajo {
+    width: 80vw;
+}
+
+.detallesRelevantes {
+    display: flex;
+    font-size: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detallesRelevantes div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sqft, .floors, .beds, .baths {
+    width: 25%;
+}
+
+.detallesRelevantes .location {
+    text-align: left;
+    width: 100%;
+}
+
+.miniTitulos input {
+    width: 35%;
+    text-align: center;
+}
+
+
+.location {
+    margin-top: 15px;
+    font-size: 1em;
+    text-align: left;
+    width: 30%;
+}
+
+.location label input {
+    position: relative;
+    background: #F4F4F4;
+    border: none;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    color: #007FC6;
+    width: 100%;
+    text-align: left;
+}
+
+input {
+    background: #F4F4F4;
+    border: none;
+    font-size: 10px;
+    border-bottom: 1px solid;
+    color: #007FC6;
+}
+
+button {
+    width: 40vw;
+    height: 4vh;
+    background-color: #F19915;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    border: none;
+    margin: 20px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #0085D0;
+}
+
+/*Footer*/
+
+.contenedor-datos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+}
+
+.contenedor-contacto {
+    display: flex;
+}
+
+.imagen-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-contacto h3 {
+    color: #F4F4F4;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#vertical {
+    width: 98px;
+    height: 123px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    position: relative;
+    top: -10px;
+}
+
+#horizontal {
+    display: none;
+}
+.contenedor-social {
+    height: 100%;
+    margin-top: 10px;
+}
+
+.contenedor-datos p {
+    font-size: 15px;
+    margin-top: 70px;
+    margin-left: 5px;
+    color: #F4F4F4;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.social-icons li{
+    list-style: none;
+}
+
+.social-icons li a {
+    display: block;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 2.25em;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    transition: .5s;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+
+.social-icons li a:hover {
+    transform: scale(1.2);    
+}
+
+.social-icons li a::before {
+    content: "";
+    
+    width: 100%;
+    height: 75px;
+    z-index: -1;
+    transform: scale(1);
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+.social-icons li a:hover::before {
+    transform: scale(0);
+}
+
+.social-icons li:nth-child(1) a,
+.social-icons li:nth-child(1) a:before {
+    background: #3b5999;
+}
+
+.social-icons li:nth-child(2) a,
+.social-icons li:nth-child(2) a:before {
+    background: #e4405f;
+}
+
+.social-icons li:nth-child(1) a:hover {
+    background: #fff;
+    border: 2px dashed #3b5999;
+    color: #3b5999;
+}
+
+.social-icons li:nth-child(2) a:hover {
+    background: #fff;
+    border: 2px dashed #e4405f;
+    color: #e4405f;
+}
+
+footer {
+    background-color: #005471;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin-top: 0px;
+    margin: 0;
+    top: 100px;
+    position: relative;
+}
+
+
+
+@media (min-width: 770px)  {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*Navbar*/
+    .contenedorLogo {
+        justify-content: left;
+    }
+
+    .logo {
+        position: relative;
+        left: 20px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .menu-lateral {
+        top: 0px;
+        height: 80px;
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0);
+        left: 10vw;
+    }
+
+    .menu-lateral a {
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    #Fav {
+        display: none;
+    }
+
+    /*Contenido principal*/
+
+    main {
+        flex-direction: row;
+    }
+
+    form {
+        flex-direction: row;
+    }
+
+    .contenedorIzquierda {
+        width: 40vw;
+    }
+
+    .formImagen {
+        width: 35vw;
+        height: 250px;
+    }
+
+    .formImagen label input {
+        margin-left: 18%;
+        font-size: 18px;
+    }
+
+    .contenedorDerecho {
+        width: 55vw;
+    }
+
+    .rectangulo {
+        background-color: white;
+        color: #005471;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px;
+        width: 40%;
+        height: 8%;
+        box-sizing: border-box;
+        padding: 0px 0;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+        position: relative;
+        right: 0px;
+    }
+
+    span {
+        font-size: 50px;
+    }
+
+    .saleRent label {
+        font-size: 50px;
+    }
+    
+    .saleRent input:checked + .sale {
+        font-size: 70px;
+    }
+    
+    .saleRent input:checked + .rent {
+        font-size: 70px;
+    }
+
+    .precio {
+        margin-top: 0;
+        font-size: 3em;
+    }
+
+    .precio div label input {
+        font-size: 40px;
+    }
+
+    .contenedorDescripcion {
+        width: 100%;
+    }
+
+    .contenedorAbajo {
+        width: 100vw;
+    }
+
+/*Paste*/
+
+.detallesRelevantes {
+    display: flex;
+    font-size: 1em;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.detallesRelevantes div {
+    text-align: center;
+}
+
+.detallesRelevantes .location {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 1em;
+    text-align: left;
+    width: 30%;
+}
+
+.miniTitulos input {
+    width: 35%;
+    text-align: center;
+}
+
+.location label input {
+    position: relative;
+    background: #F4F4F4;
+    border: none;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    color: #007FC6;
+    width: 100%;
+    text-align: left;
+}
+
+/*paste */
+
+    .detallesRelevantes {
+        font-size: 3em;
+    }
+
+    .miniTitulos input {
+        width: 50%;
+        text-align: center;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    .location {
+        margin-left: 20px;
+    }
+
+    .location label input {
+        bottom: 25px;
+        font-size: 20px;
+    }
+
+    button {
+        width: 15vw;
+        height: 5vh;
+        font-size: 20px;
+    }
+
+    /*Footer*/
+
+    .contenedor-datos {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .imagen-contacto  h3{
+        position: relative;
+        left: 140px;
+        top: 15px;
+    } 
+
+    #vertical {
+        display: none;
+    }
+
+    #horizontal {
+        width: 130px;
+        height: 93px;
+        box-sizing: border-box;
+        position: relative;  
+        display: block;
+        top: -40px;
+    }
+
+    .contenedor-datos p {
+        font-size: 20px;
+        margin-top: 70px;
+        margin-left: 15px;
+        width: 210px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        justify-content: left;
+        align-items: inherit;
+    }
+
+    .social-icons li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .social-icons li a::before {
+        height: 50px;
+    }
+        
+}
+
+

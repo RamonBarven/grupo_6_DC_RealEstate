@@ -45,6 +45,32 @@ let productController={
         let datosjson=JSON.parse(datos);
         res.render('product/adminProduct', {datosjson: datosjson, id: id});
     },
+
+    edit: function(req,res){
+        let id = req.params.id-1;
+        let datos=fs.readFileSync("data/product.json","utf-8");
+        let datosjson=JSON.parse(datos);
+        res.render('product/editProduct', {datosjson: datosjson, id: id});
+    },
+
+    editput: function(req,res){
+        let id = req.params.id-1;
+        let datos=fs.readFileSync("data/product.json","utf-8");
+        let datosjson=JSON.parse(datos);
+        /*datosjson[id].image=req.body.image;*/
+        datosjson[id].category=req.body.category;
+        datosjson[id].price=req.body.price;
+        datosjson[id].description=req.body.description;
+        datosjson[id].location=req.body.location;
+        datosjson[id].sqft=req.body.sqft;
+        datosjson[id].floors=req.body.floors;
+        datosjson[id].beds=req.body.beds;
+        datosjson[id].baths=req.body.baths;
+
+        let todojson=JSON.stringify(datosjson, null, 4);
+        fs.writeFileSync("data/product.json", todojson);
+        res.redirect('/product/admin');
+    }
 };
 
 module.exports= productController;

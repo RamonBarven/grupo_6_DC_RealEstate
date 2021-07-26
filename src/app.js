@@ -1,6 +1,7 @@
 const express=require ('express');
 const path=require('path');
 
+
 const app=express();
 app.use(express.static('../public'));
 const mainRoute=require("./routes/main");
@@ -9,6 +10,8 @@ const usersRoute=require("./routes/user");
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 app.use('/',mainRoute);
 app.use('/product',productRoute);
