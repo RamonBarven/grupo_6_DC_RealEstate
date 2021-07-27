@@ -7,6 +7,7 @@ router.put('/edit/:id', productController.editput);
 router.get('/add', productController.add);
 router.post('/add', productController.addpost);
 router.get('/admin', productController.admin);
+router.delete('/admin', productController.delete);
 router.get('/', productController.list);
 router.get('/:id', productController.detail);
 

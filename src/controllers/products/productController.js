@@ -70,6 +70,18 @@ let productController={
         let todojson=JSON.stringify(datosjson, null, 4);
         fs.writeFileSync("data/product.json", todojson);
         res.redirect('/product/admin');
+    },
+
+    delete: function(req,res){
+        let datos=fs.readFileSync("data/product.json","utf-8");
+        let datosjson=JSON.parse(datos);
+        let id=parseInt(req.body.invisible);
+        let borrar=datosjson.filter(function(elemento){
+            return elemento.id!==id;
+        })
+        let todojson=JSON.stringify(borrar, null, 4);
+        fs.writeFileSync("data/product.json", todojson);
+        res.redirect('/product/admin');
     }
 };
 

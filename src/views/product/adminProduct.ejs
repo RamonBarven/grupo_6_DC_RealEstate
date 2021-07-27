@@ -29,7 +29,8 @@
                 <div class="contenedor-admin">
                     <div  class="boton" id="edit"><a href="/product/edit/<%=i+1%>" class="detail"><i class="far fa-edit"></i> Edit</a></div>
                     <div class="delete">
-                        <form >
+                        <form method="POST" action="/product/admin?_method=DELETE">
+                            <input type="number" class="invisible" name="invisible" value="<%= datosjson[i].id %>">
                             <button type="submit" class="boton"><i class="far fa-trash-alt"></i> Delete
                             </button>
                         </form>
