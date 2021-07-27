@@ -12,7 +12,7 @@
         <main>
             <section class="contenedor-izquierda">
                 <div class=detalleImagen>
-                    <img class="fotoPropiedad" src="<%= datosjson[id].image %>">
+                    <img class="fotoPropiedad" src="./img/uploads/<%= datosjson[id].image ? datosjson[id].image: 'favorito1.png' %>">
                 </div>
                 <div class="contenedor-location">
                     <h3 class="location">Location</h3>

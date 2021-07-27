@@ -36,7 +36,7 @@
     },
     {
         "id": 1627320714567,
-        "image": "",
+        "image": "productImage-1627423366008.jfif",
         "category": "Rent",
         "price": "8000",
         "description": "Aqui vive Biden y su esposa ya no quiere",
@@ -45,5 +45,29 @@
         "floors": "19",
         "beds": "20",
         "baths": "15"
+    },
+    {
+        "id": 1627420521572,
+        "image": "productImage-1627420521566.jfif",
+        "category": "Sale",
+        "price": "20,000",
+        "description": "Aqui vive el real Joe Biden y su perrito ",
+        "location": "1600 Pennsylvania Avenue NW, Washington, DC 20500, Estados Unidos",
+        "sqft": "4000",
+        "floors": "7",
+        "beds": "20",
+        "baths": "26"
+    },
+    {
+        "id": 1627422112892,
+        "image": "productImage-1627422112886.png",
+        "category": "Rent",
+        "price": "7000",
+        "description": "Aqui vive mickey mouse",
+        "location": "Que bien todo esta bien",
+        "sqft": "2000",
+        "floors": "5",
+        "beds": "5",
+        "baths": "5"
     }
 ]

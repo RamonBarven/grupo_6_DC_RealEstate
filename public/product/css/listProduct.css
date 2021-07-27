@@ -234,14 +234,14 @@ main {
 
 .imagen{
     position: relative;
-    width: 225px;
-    height: 145px;
-    background-size:contain;
+    width: 175px;
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.imagen#uno{
-    background-image: url(../img/favorito1.png);
+.imagen-casa{
+    width: 100%;
+    object-fit: cover;
 }
 
 .info {
@@ -587,6 +587,7 @@ footer {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        margin-left: 50px;
     }
 
     .titulos {
@@ -598,13 +599,18 @@ footer {
     }
 
     .imagen {
-        width: 280px;
+        width: 240px;
         height: 170px;
+    }
+
+    .imagen-casa{
+        height: 100%;
     }
 
     .info {
         width: 20vw;
         align-items: flex-start;
+        margin-left: 20px;
     }
 
     .contenido#direccion1 {

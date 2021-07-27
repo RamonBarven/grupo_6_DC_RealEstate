@@ -20,7 +20,7 @@ let productController={
     addpost:function(req,res){
         let productos={         
         id: Date.now(),
-        image:req.body.image,
+        image:req.file.filename,
         category:req.body.category,
         price:req.body.price,
         description:req.body.description,
@@ -58,7 +58,7 @@ let productController={
         console.log(req.params.id);
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
-        datosjson[id].image=req.body.image;
+        datosjson[id].image=req.file.filename;
         datosjson[id].category=req.body.category;
         datosjson[id].price=req.body.price;
         datosjson[id].description=req.body.description;

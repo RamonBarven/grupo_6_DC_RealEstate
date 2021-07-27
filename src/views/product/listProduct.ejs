@@ -12,7 +12,9 @@
             <% for (let i = 0; i < datosjson.length; i++ ) { %>
             <div class="contenedor-casaTotal">
                 <div class="contenedor-imagenInfo">
-                    <div class="imagen" id="uno"></div>
+                    <div class="imagen" id="uno">
+                        <img class="imagen-casa"src="./img/uploads/<%= datosjson[i].image ? datosjson[i].image: 'favorito1.png' %>">
+                    </div>
                     <div class="info">
                         <h3 class="titulos" id="category"><%= datosjson[i].category %></h3>
                         <h3 class="titulos" id="location1">Location</h3>
