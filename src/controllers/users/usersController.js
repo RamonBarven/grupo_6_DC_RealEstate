@@ -1,5 +1,7 @@
 const { render } = require("ejs");
 const fs=require("fs");
+const bcrypt=require("bcryptjs");
+
 
 let usersController={
     login:function (req,res) {
@@ -9,12 +11,14 @@ let usersController={
     favorites:function (req,res) {
         res.render('user/favoritos');},    
     signuppost:function(req,res){
+        let contraEncripted=bcrypt.hashSync(req.body.password,12);
         let usuarios={         
             id: Date.now(),
+            image: req.file.filename,
             name:req.body.name,
             lastname:req.body.lastname,
             email:req.body.email,
-            password:req.body.password,
+            password:contraEncripted,
             };
     
             let datos=fs.readFileSync("data/user.json","utf-8");

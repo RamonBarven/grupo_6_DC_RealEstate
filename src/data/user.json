@@ -5,5 +5,13 @@
         "lastname": "Biden",
         "email": "bidenysuperrito@casablanca.com",
         "password": "1234"
+    },
+    {
+        "id": 1628708983007,
+        "image": "userImage-1628708982466.png",
+        "name": "Joe",
+        "lastname": "Biden",
+        "email": "bidenysuperrito@casablanca.com",
+        "password": "$2a$12$viuPfe8SE4Xvz/852frQN.pOWgC2vF2t.bS8Bdq19NxypIVaG95O6"
     }
 ]

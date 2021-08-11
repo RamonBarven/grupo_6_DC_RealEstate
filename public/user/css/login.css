@@ -38,25 +38,27 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .login {
-    font-size: 72px;
+    font-size: 50px;
     color: #007FC6;
     text-align: center;
+    margin:2vh 0 2vh 0;
 }
 
 #user {
-    font-size: 125px;
+    font-size: 80px;
     color: #007FC6;
     opacity: 1;
 }
 
 .login-parrafo {
-    font-size: 36px;
+    font-size: 25px;
     color: #005471;
     text-align: center;
-    margin: 20px 0px;
+    margin: 0px 0px;
 }
 
 #email, #password {
@@ -68,7 +70,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 36px;
     text-align: center;
     border: none;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .boton-login {
@@ -107,6 +109,16 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
+.contenedorRecuerdame{
+    display:flex;
+    justify-content: center;
+}
+.rememberLabel{
+    font-size: 20px;
+    color:#005471;
+    margin-left: 5px;
+}
+
 @media (min-width: 980px) {
 
     body {
@@ -127,12 +139,12 @@ body::-webkit-scrollbar-thumb {
 
     #user {
         font-size: 175px;
-        margin: 18px;
+        margin: 0px;
     }
 
     .login-parrafo {
         font-size: 40px;
-        width: 450px;
+        width: 100%;
         margin: 0;
     }
 
@@ -145,12 +157,12 @@ body::-webkit-scrollbar-thumb {
     #email, #password {
         width: 30vw;
         height: 80px;
-        margin: 24px 30px;
+        margin: 1vh 30px;
     }
 
     .boton-login {
-        width: 30vw;
-        height: 80px;
+        width: 25vw;
+        height: 60px;
         margin: 0;
     }
     

@@ -5,22 +5,27 @@
         <main class="contenedor-todo">
             <div class="contenedor-signup">
                 <h1 class="signup">Sign up</h1>
-                <i class="fas fa-user" id="user"></i>
-                <form method="POST" action="/user/signup">
+                <form method="POST" action="/user/signup" enctype="multipart/form-data">
+                    <label for="imageU" class="imageUlabel">
+                        <i class="fas fa-user" id="user"></i>
+                        <i class="fas fa-camera" id="camera"></i>
+                        <p class="upload">Add photo</p>
+                    </label>
+                    <input type=file id="imageU" name="imageU" accept="image/*">
                     <div class="contenedor-nombre">
                         <label for="name">
-                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="text" name="name" id="name" placeholder="Name" required>
                         </label>
                         <label for="lastname">
-                            <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                            <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
                         </label>
                     </div>
                     <div class="contenedor-password">
                         <label for="email">
-                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </label>
                         <label for="password">
-                            <input type="password" name="password" id="password" placeholder="Password">
+                            <input type="password" name="password" id="password" placeholder="Password" required>
                         </label>
                     </div>
                     <div class="contenedor-boton">
