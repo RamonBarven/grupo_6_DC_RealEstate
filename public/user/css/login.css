@@ -119,6 +119,16 @@ body::-webkit-scrollbar-thumb {
     margin-left: 5px;
 }
 
+.error {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mensaje-error {
+    color: red;
+}
+
 @media (min-width: 980px) {
 
     body {

@@ -21,6 +21,7 @@ router.get('/login', usersController.login);
 router.get('/signup', usersController.signup);
 router.post('/signup', upload.single('imageU'), usersController.signuppost);
 router.get('/favorites', usersController.favorites);
+router.post('/login', usersController.loginpost);
 
 
 module.exports=router;

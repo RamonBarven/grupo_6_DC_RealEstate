@@ -7,7 +7,7 @@
             <h1 class="login">Log in</h1>
             <i class="fas fa-user" id="user"></i>
             <p class="login-parrafo">Enter your email and password</p>
-            <form>
+            <form method="POST" action="/user/login">
                 <div class="contenedor-forms">
                         <input type="email" name="email" id="email" placeholder="Email">
                         <input type="password" name="password" id="password" placeholder="Password">
@@ -21,6 +21,13 @@
             </form>
         </div>
         <a href="/user/signup" class="signup">Create a new account</a>
+
+        <% if(locals.errors) {
+        if (errors === true) { %>
+            <div class="error">
+                <p class="mensaje-error">Email and password are incorrect</p>
+            </div>
+        <%}}%>
 
     </main>
 </body>

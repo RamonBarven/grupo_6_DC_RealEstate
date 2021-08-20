@@ -1,17 +1,18 @@
 [
     {
-        "id": 1627418217773,
-        "name": "Joe",
-        "lastname": "Biden",
-        "email": "bidenysuperrito@casablanca.com",
-        "password": "1234"
-    },
-    {
         "id": 1628708983007,
         "image": "userImage-1628708982466.png",
         "name": "Joe",
         "lastname": "Biden",
         "email": "bidenysuperrito@casablanca.com",
         "password": "$2a$12$viuPfe8SE4Xvz/852frQN.pOWgC2vF2t.bS8Bdq19NxypIVaG95O6"
+    },
+    {
+        "id": 1629485605781,
+        "image": "userImage-1629485605461.png",
+        "name": "Ramon",
+        "lastname": "Barraza",
+        "email": "r.barraza1509@gmail.com",
+        "password": "$2a$12$oU4knHkmgmlizkn7Ymmbpuqvn2Q0sZ.oEUMzOEELCAUiOtL1RfiWm"
     }
 ]
