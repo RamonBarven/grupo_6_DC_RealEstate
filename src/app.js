@@ -1,5 +1,7 @@
 const express=require ('express');
 const path=require('path');
+const cookieParser=require('cookie-parser');
+const rememberMeMiddleware=require('./Middlewares/rememberMeMiddleware');
 const app=express();
 
 const session = require('express-session');
@@ -16,6 +18,8 @@ app.use(express.json());
 app.use(session( {secret:"Es un secreto de ..."}));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+app.use(cookieParser());
+app.use(rememberMeMiddleware);
 
 app.use('/',mainRoute);
 app.use('/product',productRoute);

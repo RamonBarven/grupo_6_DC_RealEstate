@@ -49,7 +49,11 @@ let usersController={
                 req.session.email = userFind.email;
                 req.session.started = true;
             }
+        if (req.body.remember === 'saved') {
+                res.cookie('remember',userFind.email, {maxAge: 600000});
+            }
         }; 
+
         if (errors === true) {
             res.render('user/login', {errors:errors});
         } else {
