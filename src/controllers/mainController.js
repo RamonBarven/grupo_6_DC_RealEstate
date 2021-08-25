@@ -1,6 +1,6 @@
 let mainController={
     index:function (req,res) {
-        res.render("index");}
+        res.render("index", {session:req.session, error:req.query.alert});}
 
 }
 

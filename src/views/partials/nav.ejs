@@ -10,8 +10,13 @@
         <a class="enlaces" href="">Contact</a>
         <a class="enlaces" href="">About us</a>
         <a class="enlaces" href="/user/favorites"><i class="fas fa-heart" ></i><span id="Fav"> Favorites</span></a>
-        <a class="enlaces" href="/user/login"><p class="my-account">
-            <i class="fas fa-house-user"></i> My account
-        </p></a>
+        <%if (session.started!=true){%>
+            <a class="enlaces" href="/user/login"><p class="my-account">
+            <i class="fas fa-house-user"></i> My account</p></a>
+
+        <%}else{%> 
+            <a class="enlaces" href=""><p class="my-account">
+                <i class="fas fa-house-user"></i> <%=session.name%></p></a> 
+        <%}%>
     </div>
 </nav>

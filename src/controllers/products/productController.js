@@ -7,15 +7,15 @@ let productController={
         let id = req.params.id-1;
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
-        res.render('product/detail', {datosjson: datosjson, id: id}); 
+        res.render('product/detail', {datosjson: datosjson, id: id, session:req.session}); 
     },
     add:function (req,res) {
-        res.render('product/addProduct')},
+        res.render('product/addProduct', {session:req.session})},
     list:function(req,res){
         let id = req.params.id-1;
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
-        res.render('product/listProduct', {datosjson: datosjson, id: id})
+        res.render('product/listProduct', {datosjson: datosjson, id: id, session:req.session})
     },
     addpost:function(req,res){
         let productos={         
@@ -43,14 +43,14 @@ let productController={
         let id = req.params.id-1;
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
-        res.render('product/adminProduct', {datosjson: datosjson, id: id});
+        res.render('product/adminProduct', {datosjson: datosjson, id: id, session:req.session});
     },
 
     edit: function(req,res){
         let id = req.params.id-1;
         let datos=fs.readFileSync("data/product.json","utf-8");
         let datosjson=JSON.parse(datos);
-        res.render('product/editProduct', {datosjson: datosjson, id: id});
+        res.render('product/editProduct', {datosjson: datosjson, id: id, session:req.session});
     },
 
     editput: function(req,res){

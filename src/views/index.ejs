@@ -26,6 +26,12 @@
                 <img id="seis" src="./img/Casa1.png">
             </div>
         </section>
+        <%if(locals.error){
+            if(error==="true"){%>
+                <div class="error">
+                    <p class="mensaje-error">You have already logged in</p>
+                </div>
+        <%}}%>
         <%-include('./partials/footer')%>
     </body>
 </html>

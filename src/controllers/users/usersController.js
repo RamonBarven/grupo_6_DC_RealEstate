@@ -5,11 +5,11 @@ const bcrypt=require("bcryptjs");
 
 let usersController={
     login:function (req,res) {
-        res.render('user/login');},
+        res.render('user/login', {session:req.session});},
     signup:function (req,res) {
-        res.render('user/signUp');},
+        res.render('user/signUp', {session:req.session});},
     favorites:function (req,res) {
-        res.render('user/favoritos');},    
+        res.render('user/favoritos', {session:req.session});},    
     signuppost:function(req,res){
         let contraEncripted=bcrypt.hashSync(req.body.password,12);
         let usuarios={         
@@ -36,7 +36,6 @@ let usersController={
         let userFind = datosjson.find(function(usuario){
             return usuario.email === req.body.email; 
         });
-        console.log(userFind);
         if(!userFind){
             errors =true;
         } else {

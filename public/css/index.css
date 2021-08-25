@@ -248,6 +248,26 @@ footer {
     top: 110px;
 }
 
+.error{
+    position: absolute;
+    top: 90px;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 5vh;
+    background-color: white;
+    font-weight: bold;
+    margin-left: -50%;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    animation:alerta 5s 1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes alerta{ 0%{opacity: 100%} 100%{opacity: 0%} }
+
 @media (min-width: 770px)  {
     
     body {
@@ -376,5 +396,9 @@ footer {
 
     footer {
         top: 130px;
+    }
+
+    .error{
+        font-size: 20px;
     }
 }

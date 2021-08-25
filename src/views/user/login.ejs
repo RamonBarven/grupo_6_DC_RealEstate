@@ -5,7 +5,23 @@
     <main class="contenedor-todo">
         <div class="contenedor-login">
             <h1 class="login">Log in</h1>
-            <i class="fas fa-user" id="user"></i>
+            <div class="caja-iconos">
+                <i class="fas fa-user" id="user"></i>
+                <% if(locals.errors) {
+                if (errors === true) { %>
+                    <i class="fas fa-comment" id="dialogo"></i>
+                    <div class="error">
+                        <p class="mensaje-error" >Wrong email or password</p>
+                    </div>
+                <%}}%>
+                <% if(locals.alert) {
+                    if (alert === true) { %>
+                        <i class="fas fa-comment" id="dialogo"></i>
+                        <div class="error2">
+                            <p class="mensaje-error">Please log in</p>
+                        </div>
+                <%}}%>
+            </div>
             <p class="login-parrafo">Enter your email and password</p>
             <form method="POST" action="/user/login">
                 <div class="contenedor-forms">
@@ -21,13 +37,6 @@
             </form>
         </div>
         <a href="/user/signup" class="signup">Create a new account</a>
-
-        <% if(locals.errors) {
-        if (errors === true) { %>
-            <div class="error">
-                <p class="mensaje-error">Email and password are incorrect</p>
-            </div>
-        <%}}%>
 
     </main>
 </body>
