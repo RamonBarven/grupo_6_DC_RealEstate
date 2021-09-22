@@ -27,7 +27,7 @@ Reto Sprint 4.
 4. Hacer menos: Plática durante las reuniones en Google Meets.
 5. Dejar hacer: No atrasarnos con el contenido del Playground.
 
-Reto Sprint 4.
+Reto Sprint 5.
 1. Comenzar a hacer: Hacer reuniones para resolver dudas de conceptos y realizar mejoras de la página.
 2. Hacer más: Verificación del sprint antes de mandarlo.
 3. Continuar haciendo: Seguir con la organización del equipo y la buena convivencia.
