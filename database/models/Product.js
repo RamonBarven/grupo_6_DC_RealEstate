@@ -4,7 +4,8 @@ module.exports = (sequelize,dataTypes) => {
         product_id:{
             type: dataTypes.INTEGER,
             primaryKey:true, 
-            autoIncrement:true
+            autoIncrement:true,
+            allowNull:false
         },
         image:{
             type: dataTypes.STRING(100),
@@ -35,8 +36,8 @@ module.exports = (sequelize,dataTypes) => {
         }
     }
     let config = {
-        tableName= 'products',
-        timestamps= false
+        tableName: 'products',
+        timestamps: false
     }
     const Product = sequelize.define(alias, cols, config);
 
@@ -50,7 +51,8 @@ module.exports = (sequelize,dataTypes) => {
             through: 'favorites',
             foreignKey: 'product_id',
             otherKey: 'user_id',
-            timestamps: false
+            timestamps: false,
+            onDelete:'cascade'
         })
     }
 

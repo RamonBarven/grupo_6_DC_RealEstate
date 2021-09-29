@@ -20,18 +20,18 @@
     <section class="contenedorDerecho">
         <section class="rectangulo">
             <div class="saleRent">
-                <% if (datosjson[id].category==="Sale"){%>
-                <input type="radio" name="category" id="sale" value="Sale" checked required>
+                <% if (producto.category_id===1){%>
+                <input type="radio" name="category" id="sale" value="1" checked required>
                 <label class= "sale" for="sale">Sale</label>
                 <span>/</span>
-                <input type="radio" name="category" id="rent" value="Rent" required>
+                <input type="radio" name="category" id="rent" value="2" required>
                 <label class="sale" for="rent">Rent</label>
 
                 <%}else{%>
-                <input type="radio" name="category" id="sale" value="Sale"  required>
+                <input type="radio" name="category" id="sale" value="1"  required>
                 <label class= "sale" for="sale">Sale</label>
                 <span>/</span>
-                <input type="radio" name="category" id="rent" value="Rent" checked required>
+                <input type="radio" name="category" id="rent" value="2" checked required>
                 <label class="sale" for="rent">Rent</label>
                 <%}%>
                 
@@ -41,7 +41,7 @@
             <div class="precio">
                 <div>
                     <label for="price"><i class="fas fa-tags"></i>
-                        <input type="text" name="price" id="price" placeholder="$Price" value="<%= datosjson[id].price %>" required>
+                        <input type="text" name="price" id="price" placeholder="$Price" value="<%= producto.price %>" required>
                     </label>
                 </div>
             </div>
@@ -50,7 +50,7 @@
         <section class="contenedorDescripcion">
             <div>
                 <label class="descripcionTitulo" for="description">Description<br>
-                    <textarea name="description" id="description" placeholder="Insert the description here."  required><%= datosjson[id].description %></textarea>
+                    <textarea name="description" id="description" placeholder="Insert the description here."  required><%= producto.description %></textarea>
                 </label>
             </div>
         </section>
@@ -59,27 +59,27 @@
         <section class="detallesRelevantes">  
                     <div class="location">
                         <label class="miniTitulos" for="location">Location<br>
-                            <input type="text" name="location" id="location" placeholder="Insert address here." value="<%= datosjson[id].location %>" required>
+                            <input type="text" name="location" id="location" placeholder="Insert address here." value="<%= producto.location %>" required>
                         </label>
                     </div>
                 <div class="sqft">
                     <label class="miniTitulos" for="sqft">Sqft<br>
-                        <input type="number" name="sqft" id="sqft" placeholder="##" value="<%= datosjson[id].sqft %>" required min="0">
+                        <input type="number" name="sqft" id="sqft" placeholder="##" value="<%= producto.sqft %>" required min="0">
                     </label>
                 </div>
                 <div class="floors">
                     <label class="miniTitulos" for="floors">Floors<br>
-                        <input type="number" name="floors" id="floors" placeholder="##" value="<%= datosjson[id].floors %>" required min="0">
+                        <input type="number" name="floors" id="floors" placeholder="##" value="<%= producto.floors %>" required min="0">
                     </label>
                 </div>
                 <div class="beds">
                     <label class="miniTitulos" for="beds">Beds<br>
-                        <input type="number" name="beds" id="beds" placeholder="##" value="<%= datosjson[id].beds%>" required min="0">
+                        <input type="number" name="beds" id="beds" placeholder="##" value="<%= producto.beds%>" required min="0">
                     </label>
                 </div>
                 <div class="baths">
                     <label class="miniTitulos" for="baths">Baths<br>
-                        <input type="number" name="baths" id="baths" placeholder="##" value="<%= datosjson[id].baths %>" required min="0">
+                        <input type="number" name="baths" id="baths" placeholder="##" value="<%= producto.baths %>" required min="0">
                     </label>
                 </div>
         </section>

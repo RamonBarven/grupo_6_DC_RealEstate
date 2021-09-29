@@ -9,30 +9,30 @@
                 <button class="search-boton" type="submit"><i class="fas fa-search"></i></button>
             </form>
             <h2 class="top">Resultados</h2>
-            <% for (let i = 0; i < datosjson.length; i++ ) { %>
+            <% for (let i = 0; i < productos.length; i++ ) { %>
             <div class="contenedor-casaTotal">
                 <div class="contenedor-imagenInfo">
                     <div class="imagen" id="uno">
-                        <img class="imagen-casa"src="./img/uploads/<%= datosjson[i].image ? datosjson[i].image: 'favorito1.png' %>">
+                        <img class="imagen-casa"src="./img/uploads/<%= productos[i].image ? productos[i].image: 'favorito1.png' %>">
                     </div>
                     <div class="info">
-                        <h3 class="titulos" id="category"><%= datosjson[i].category %></h3>
+                        <h3 class="titulos" id="category"><%= productos[i].Categories.status%></h3>
                         <h3 class="titulos" id="location1">Location</h3>
-                        <p class="contenido" id=direccion1><%= datosjson[i].location %> </p>
-                        <p class="contenido" id=precio1>$<%= datosjson[i].price %></p>
+                        <p class="contenido" id=direccion1><%= productos[i].location %> </p>
+                        <p class="contenido" id=precio1>$<%= productos[i].price %></p>
                     </div>
                 </div>
                 <div class="contenedor-datosUno">
-                    <h3 class="titulos" id="bathroom1">Sqft: <span class="numero"><%= datosjson[i].sqft %></span></h3>
-                    <h3 class="titulos" id="floors1">Floors: <span class="numero"><%= datosjson[i].floors %></span></h3>
-                    <h3 class="titulos" id="bedroom1">Bedroom: <span class="numero"><%= datosjson[i].beds %></span></h3>
-                    <h3 class="titulos" id="bathroom1">Bathroom: <span class="numero"><%= datosjson[i].baths %></span></h3>
+                    <h3 class="titulos" id="bathroom1">Sqft: <span class="numero"><%= productos[i].sqft %></span></h3>
+                    <h3 class="titulos" id="floors1">Floors: <span class="numero"><%= productos[i].floors %></span></h3>
+                    <h3 class="titulos" id="bedroom1">Bedroom: <span class="numero"><%= productos[i].beds %></span></h3>
+                    <h3 class="titulos" id="bathroom1">Bathroom: <span class="numero"><%= productos[i].baths %></span></h3>
                 </div>
                 <div class="contenedor-admin">
-                    <div  class="boton" id="edit"><a href="/product/edit/<%=i+1%>" class="detail"><i class="far fa-edit"></i> Edit</a></div>
+                    <div  class="boton" id="edit"><a href="/product/edit/<%=productos[i].product_id%>" class="detail"><i class="far fa-edit"></i> Edit</a></div>
                     <div class="delete">
                         <form method="POST" action="/product/admin?_method=DELETE">
-                            <input type="number" class="invisible" name="invisible" value="<%= datosjson[i].id %>">
+                            <input type="number" class="invisible" name="invisible" value="<%= productos[i].product_id %>">
                             <button type="submit" class="boton"><i class="far fa-trash-alt"></i> Delete
                             </button>
                         </form>

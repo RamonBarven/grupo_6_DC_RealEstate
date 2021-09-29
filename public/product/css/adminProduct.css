@@ -144,6 +144,10 @@ main {
     margin: 0 0 5px 0;
 }
 
+.titulos::first-letter{
+    text-transform: uppercase;
+}
+
 .titulos#numero{
     position: relative;
     left: 17px;
@@ -178,6 +182,10 @@ main {
     color:black;
     position: relative;
     margin: 0px;
+}
+
+.contenido::first-letter{
+    text-transform: uppercase;
 }
 
 .contenido#direccion1{

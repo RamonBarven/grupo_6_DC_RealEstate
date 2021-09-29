@@ -63,6 +63,10 @@ header {
     margin: 0 0 0 30px;
 }
 
+.rentSale::first-letter{
+    text-transform: uppercase;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -108,6 +112,10 @@ main {
     margin: 0 10px;
 }
 
+.location-text::first-letter{
+    text-transform: uppercase;
+}
+
 .contenedor-derecha {
     display: flex;
     flex-direction: column;
@@ -133,6 +141,10 @@ main {
     text-align: left;
     width: 80vw;
     font-size: 30px;
+}
+
+.textoDescripcion::first-letter{
+    text-transform: uppercase;
 }
 
 .add-favorites{
