@@ -3,6 +3,7 @@ const fs=require("fs");
 const db=require("../../../database/models");
 
 
+
 let productController={
     detail:function(req,res){
         let id = req.params.id;
@@ -38,7 +39,9 @@ let productController={
             beds:req.body.beds,
             baths:req.body.baths,
         })
-        res.redirect('/product');
+        .then(function(productos){
+            res.redirect('/product');
+        })
     },
 
     admin: function(req, res) {
@@ -83,17 +86,17 @@ let productController={
     },
 
     delete: function(req,res){
+        db.Favorites.destroy({
+            where:{
+                product_id:req.body.invisible } ,            
+           
+        })
         db.Products.destroy({
             where:{
-                product_id:req.body.invisible
-            } 
-        })
-        db.users.destroy({
-            where:{
-                product_id:req.body.invisible
-            }
-        })
-       
+                product_id:req.body.invisible } ,            
+               
+            }) 
+        
         .then(producto=>{
             res.redirect('/product/admin');
         })

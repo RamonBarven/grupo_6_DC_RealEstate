@@ -33,13 +33,11 @@ module.exports = (sequelize,dataTypes) => {
             as: 'UserTypes',
             foreignKey: 'type_id'
         })
-        User.belongsToMany(models.Products, {
-            as: 'products',
-            through: 'favorites',
-            foreignKey: 'user_id',
-            otherKey: 'product_id',
-            timestamps: false
-        })
+        
+        User.hasMany(models.Favorites,{
+            as: 'Favorites',
+            foreignKey: 'user_id'
+            })
     }
     return User;
 }
