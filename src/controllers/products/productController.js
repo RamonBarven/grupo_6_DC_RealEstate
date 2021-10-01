@@ -1,6 +1,10 @@
 const { render } = require("ejs");
 const fs=require("fs");
+const { Sequelize } = require("../../../database/models");
 const db=require("../../../database/models");
+const Categories = require("../../../database/models/Category");
+const Op= Sequelize.Op;
+
 
 
 
@@ -103,7 +107,45 @@ let productController={
         .catch(err=>{
             return res.send(err)
         })
-    }
-};
+    }, 
+
+    search: function(req, res){
+        if(req.query.search == 'sale'||req.query.search == 'Sale'){
+            db.Products.findAll({
+                include: [{association:"Categories"}]
+            }
+            )
+             .then(function(productos){
+                 let productsale = productos.filter(function(filtrado){
+                     return filtrado.Categories.status == 'sale';
+                 })
+                 res.render('product/results', {productos: productsale, session:req.session});
+             })
+        } else if(req.query.search == 'rent'||req.query.search == 'Rent'){
+            db.Products.findAll({
+                include: [{association:"Categories"}]
+            }
+            )
+             .then(function(productos){
+                 let productrent = productos.filter(function(filtrado){
+                     return filtrado.Categories.status == 'rent';
+                 })
+                 res.render('product/results', {productos: productrent, session:req.session});
+             })
+        } else {
+            db.Products.findAll({
+                include: ['Categories'],
+                where:{
+                    [Op.or]: [{location:{[Op.like]:'%'+req.query.search+'%'}}, {description:{[Op.like]:'%'+req.query.search+'%'}}]
+                }
+            })
+            .then(function(productos){
+                res.render('product/results', {productos: productos, session:req.session});
+            })
+        }
+        }
+        
+    };
+
 
 module.exports= productController;

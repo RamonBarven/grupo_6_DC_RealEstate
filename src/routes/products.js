@@ -23,8 +23,10 @@ router.get('/add', productController.add);
 router.post('/add', upload.single('image'), productController.addpost);
 router.get('/admin', productController.admin);
 router.delete('/admin', productController.delete);
+router.get('/results?', productController.search);
 router.get('/', productController.list);
 router.get('/:id', productController.detail);
+
 
 
 
