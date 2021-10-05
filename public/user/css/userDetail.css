@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    background-color:#f4f4f4;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 15px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+html {
+    height: 100%;
+}
+
+.contenedor-todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    position:relative;
+    top:80px;
+}
+
+
+.contenedor-signup {
+    width: 100vw;
+    background-color:#f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.signup {
+    font-size: 40px;
+    color:#0085D0;
+    text-align: center;
+}
+
+.contenedor-nombre, .contenedor-password  {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    position:relative;
+
+}
+
+H3{
+    font-size:23px;
+    padding: 0px;
+    margin:0px 0 15px 0;
+
+}
+H4{
+    margin:0 0 5px 25px;
+    align-self: flex-start;
+    text-align: left;
+    font-style: italic;
+    font-weight: normal;
+    color:#005471;
+}
+
+
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.boton-signup {
+    width: 130px;
+    height: 45px;
+    background-color: #F19915;
+    border-radius: 28px;
+    color: white;
+    text-align: center;
+    border: none;
+    margin-top: 25px;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.boton-signup:hover{
+    background-color: #005471;
+}
+
+@media (min-width:900px){
+    .contenedor-todo form{
+        display:flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    .signup{
+        font-size:72px;
+        margin-top: 20px;
+    }
+    
+    .contenedor-signup {
+        width: 100vw;
+    }
+
+    .boton-signup {
+        justify-self: center;
+        width: 330px;
+        margin-bottom: 10%;
+    }
+
+    .contenedor-nombre, .contenedor-password{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

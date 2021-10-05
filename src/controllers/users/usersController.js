@@ -60,6 +60,11 @@ let usersController={
             res.redirect('/home');
         }
         
+    },
+
+    detail: function(req, res){
+        res.render('user/userDetail', {session:req.session});
+
     }
 
 };

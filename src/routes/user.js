@@ -21,9 +21,11 @@ let upload = multer({storage: storage});
 
 router.get('/login',noLoginMiddleware, usersController.login);
 router.get('/signup',noLoginMiddleware, usersController.signup);
+router.get('/detail/:id', usersController.detail);
 router.post('/signup', upload.single('imageU'), usersController.signuppost);
 router.get('/favorites',loginMiddleware, usersController.favorites);
 router.post('/login', usersController.loginpost);
+
 
 
 module.exports=router;
