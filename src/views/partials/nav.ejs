@@ -15,7 +15,7 @@
             <i class="fas fa-house-user"></i> My account</p></a>
 
         <%}else{%> 
-            <a class="enlaces" href=""><p class="my-account">
+            <a class="enlaces" href="/user/detail/<%=session.id%>"><p class="my-account">
                 <i class="fas fa-house-user"></i> <%=session.name%></p></a> 
         <%}%>
     </div>

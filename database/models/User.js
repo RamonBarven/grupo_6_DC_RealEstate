@@ -4,7 +4,8 @@ module.exports = (sequelize,dataTypes) => {
         user_id:{
             type: dataTypes.INTEGER,
             primaryKey:true, 
-            autoIncrement:true
+            autoIncrement:true,
+            allowNull:false
         },
         name:{
             type: dataTypes.STRING(50),
@@ -16,7 +17,7 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.STRING(50),
         },
         password:{
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(200),
         },
         photo:{
             type: dataTypes.STRING(100),

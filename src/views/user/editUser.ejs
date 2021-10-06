@@ -1,0 +1,44 @@
+<%-include('.././partials/head')%>
+        <link href="/user/css/editUser.css" rel="stylesheet">
+    </head>
+    <body> 
+        <%-include('.././partials/nav')%>
+        <main class="contenedor-todo">
+            <div class="contenedor-signup">
+                <h1 class="signup">My account</h1>
+                    <form method="POST" action="/user/edit/<%= %>?_method=PUT" enctype="multipart/form-data">
+                        <label for="imageU" class="imageUlabel">
+                            <img class="profile" src="/user/img/Denise1.png">
+                            <i class="fas fa-edit icon-edit" ></i>
+                        </label>
+                        <input type=file id="imageU" name="imageU" accept="image/*">
+                        <div class="contenedor-datos">
+                            <div class="contenedor-nombre">
+                                <label for="name">
+                                    <input type="text" name="name" id="name" placeholder="Name" required>
+                                </label>
+                                <label for="lastname">
+                                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                                </label>
+                            </div>
+                            <div class="contenedor-password">
+                                <label for="email">
+                                    <input type="email" name="email" id="email" placeholder="Email" required>
+                                </label>
+                                <label for="password">
+                                    <input type="password" name="password" id="password" placeholder="Password" required>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="contenedor-botones">
+                            <a href="" class="cancel">Cancel</a>
+                            <button class="save" type="submit">Save</button>
+                        </div>
+                    </form>
+            </div>
+    
+        </main>
+
+    </body>
+</html>

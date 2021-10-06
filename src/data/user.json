@@ -14,5 +14,13 @@
         "lastname": "Barraza",
         "email": "r.barraza1509@gmail.com",
         "password": "$2a$12$oU4knHkmgmlizkn7Ymmbpuqvn2Q0sZ.oEUMzOEELCAUiOtL1RfiWm"
+    },
+    {
+        "id": 1633494889160,
+        "image": "userImage-1633494888845.png",
+        "name": "Ramon",
+        "lastname": "Barraza",
+        "email": "r.barraza1509@gmail.com",
+        "password": "$2a$12$C6zyS0mnSnEiNv2xHxVVR.tgd9SW/oLcgUj/seYU2IbWXzn1gRb5C"
     }
 ]

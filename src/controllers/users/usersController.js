@@ -1,6 +1,9 @@
 const { render } = require("ejs");
 const fs=require("fs");
 const bcrypt=require("bcryptjs");
+const { Sequelize } = require("../../../database/models");
+const db=require("../../../database/models");
+const Op= Sequelize.Op;
 
 
 let usersController={
@@ -12,59 +15,64 @@ let usersController={
         res.render('user/favoritos', {session:req.session});},    
     signuppost:function(req,res){
         let contraEncripted=bcrypt.hashSync(req.body.password,12);
-        let usuarios={         
-            id: Date.now(),
-            image: req.file.filename,
+        db.Users.create({         
+            photo: req.file.filename,
             name:req.body.name,
-            lastname:req.body.lastname,
+            lastName:req.body.lastname,
             email:req.body.email,
             password:contraEncripted,
-            };
-    
-            let datos=fs.readFileSync("data/user.json","utf-8");
-            let datosjson=JSON.parse(datos);
-            datosjson.push(usuarios);
-            let todojson=JSON.stringify(datosjson, null, 4);
-            fs.writeFileSync("data/user.json", todojson);
-            res.redirect('/home');
+            })
+            .then(function(usuario){
+                res.redirect('/home');
+            }) 
     }, 
 
     loginpost: function(req, res){
-        let datos=fs.readFileSync("data/user.json","utf-8");
-        let datosjson=JSON.parse(datos);
+
         let errors = false;
-        let userFind = datosjson.find(function(usuario){
-            return usuario.email === req.body.email; 
-        });
-        if(!userFind){
-            errors =true;
-        } else {
-            let check = bcrypt.compareSync(req.body.password, userFind.password);
-            if (check === false) {
-                errors = true;
+
+        db.Users.findOne({
+            where:{
+                email:req.body.email
+            }
+        })
+        .then(function(usuario){
+            console.log(usuario);
+            let check = bcrypt.compareSync(req.body.password, usuario.password);
+            if(check===false){
+                errors=true;
+                res.render('user/login', {errors:errors});
             } else {
-                req.session.image = userFind.image;
-                req.session.name = userFind.name;
-                req.session.lastname = userFind.lastname;
-                req.session.email = userFind.email;
+                req.session.image = usuario.photo;
+                req.session.name = usuario.name;
+                req.session.lastname = usuario.lastName;
+                req.session.email = usuario.email;
+                req.session.id = usuario.user_id;
                 req.session.started = true;
             }
-        if (req.body.remember === 'saved') {
-                res.cookie('remember',userFind.email, {maxAge: 600000});
+            if (req.body.remember === 'saved') {
+                res.cookie('remember',usuario.email, {maxAge: 600000});
             }
-        }; 
 
-        if (errors === true) {
-            res.render('user/login', {errors:errors});
-        } else {
             res.redirect('/home');
-        }
+        })
+
+        .catch(function(errores){
+            console.log(errores);
+            errors=true;
+            res.render('user/login', {errors:errors});
+        })
+        
         
     },
 
     detail: function(req, res){
         res.render('user/userDetail', {session:req.session});
 
+    },
+
+    edit: function(req, res){
+        res.render('user/editUser', {session:req.session});
     }
 
 };
