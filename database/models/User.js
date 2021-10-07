@@ -21,6 +21,9 @@ module.exports = (sequelize,dataTypes) => {
         },
         photo:{
             type: dataTypes.STRING(100),
+        },
+        type_id:{
+            type: dataTypes.INTEGER,
         }
     }
     let config = {

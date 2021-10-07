@@ -4,7 +4,6 @@
 
 body {
     max-width: 100%;
-    overflow:hidden;
     background-color:#007FC6;
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +15,6 @@ body {
 }
 
 html {
-    overflow: hidden;
     height: 100%;
 }
 
@@ -115,6 +113,36 @@ html {
     width: 100vw;
 }
 
+.saleRent input {
+    display: none;
+}
+
+.saleRent label {
+    color:black;
+    opacity: 1;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.rectangulo {
+    margin-top: 20px;
+}
+
+.saleRent input:checked + .sale {
+    color:white;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.saleRent input:checked + .rent {
+    color:white;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 32px;
+}
+
 .boton-signup {
     width: 200px;
     height: 75px;
@@ -123,7 +151,7 @@ html {
     color: white;
     text-align: center;
     border: none;
-    margin-top: 35px;
+    margin: 20px 0 20px 0;
     font-size: 37px;
 }
 
@@ -155,6 +183,19 @@ html {
         margin:0px 0px 0px 0px;
         color:#007FC6;
     }
+
+    .saleRent label, span {
+        font-size: 50px;
+    }
+    
+    .saleRent input:checked + .sale {
+        font-size: 70px;
+    }
+    
+    .saleRent input:checked + .rent {
+        font-size: 70px;
+    }
+
     .contenedor-signup {
         width: 100vw;
     }
