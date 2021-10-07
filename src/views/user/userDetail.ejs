@@ -8,7 +8,7 @@
                 <h1 class="signup">My account</h1>
                     <img class="profile" src="/user/img/uploads/<%=session.image%>">
                     <div class="contenedor-datos">
-                        <a href="user/edit/<%=session.id%>" class="edit-link"><i class="fas fa-cog edit"></i></a>
+                        <a href="/user/edit/<%=session.numero%>" class="edit-link"><i class="fas fa-cog edit"></i></a>
                         <div class="contenedor-nombre">
                             <H4>Name</H4>
                             <H3><%=session.name%></H3>
@@ -19,7 +19,11 @@
                                 <H4>Email</H4>
                                 <h3><%=session.email%></h3>
                                 <H4>User Type</H4>
-                                <h3>Seller</h3>
+                                <% if (session.type==1){%>
+                                        <h3>Buyer</h3>
+                                    <%} else {%>
+                                        <h3>Seller</h3>
+                                   <%}%>
                         </div>
                     </div>
             </div>

@@ -19,13 +19,15 @@ let storage = multer.diskStorage({
 
 let upload = multer({storage: storage});
 
+router.get('/edit/:id',loginMiddleware, usersController.edit);
+router.put('/edit/:id', upload.single('imageU'), usersController.editput);
 router.get('/login',noLoginMiddleware, usersController.login);
 router.get('/signup',noLoginMiddleware, usersController.signup);
-router.get('/detail/:id', usersController.detail);
-router.get('/edit/:id', usersController.edit)
 router.post('/signup', upload.single('imageU'), usersController.signuppost);
 router.get('/favorites',loginMiddleware, usersController.favorites);
 router.post('/login', usersController.loginpost);
+router.get('/detail/:id',loginMiddleware, usersController.detail);
+
 
 
 

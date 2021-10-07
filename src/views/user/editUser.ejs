@@ -6,33 +6,32 @@
         <main class="contenedor-todo">
             <div class="contenedor-signup">
                 <h1 class="signup">My account</h1>
-                    <form method="POST" action="/user/edit/<%= %>?_method=PUT" enctype="multipart/form-data">
+                    <form method="POST" action="/user/edit/<%=session.id%>?_method=PUT" enctype="multipart/form-data">
                         <label for="imageU" class="imageUlabel">
-                            <img class="profile" src="/user/img/Denise1.png">
+                            <img class="profile" src="/user/img/uploads/<%=session.image%>">
                             <i class="fas fa-edit icon-edit" ></i>
                         </label>
                         <input type=file id="imageU" name="imageU" accept="image/*">
                         <div class="contenedor-datos">
                             <div class="contenedor-nombre">
                                 <label for="name">
-                                    <input type="text" name="name" id="name" placeholder="Name" required>
+                                    <input type="text" name="name" id="name" placeholder="Name" value="<%=session.name%>" required>
                                 </label>
                                 <label for="lastname">
-                                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" value="<%=session.lastname%>" required>
                                 </label>
                             </div>
                             <div class="contenedor-password">
                                 <label for="email">
-                                    <input type="email" name="email" id="email" placeholder="Email" required>
+                                    <input type="email" name="email" id="email" placeholder="Email" value="<%=session.email%>" required>
                                 </label>
                                 <label for="password">
                                     <input type="password" name="password" id="password" placeholder="Password" required>
                                 </label>
                             </div>
-                            
                         </div>
                         <div class="contenedor-botones">
-                            <a href="" class="cancel">Cancel</a>
+                            <a href="/user/detail/<%=session.numero%>" class="cancel">Cancel</a>
                             <button class="save" type="submit">Save</button>
                         </div>
                     </form>

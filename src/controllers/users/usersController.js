@@ -21,6 +21,7 @@ let usersController={
             lastName:req.body.lastname,
             email:req.body.email,
             password:contraEncripted,
+            type_id: req.body.category
             })
             .then(function(usuario){
                 res.redirect('/home');
@@ -37,7 +38,6 @@ let usersController={
             }
         })
         .then(function(usuario){
-            console.log(usuario);
             let check = bcrypt.compareSync(req.body.password, usuario.password);
             if(check===false){
                 errors=true;
@@ -47,8 +47,10 @@ let usersController={
                 req.session.name = usuario.name;
                 req.session.lastname = usuario.lastName;
                 req.session.email = usuario.email;
-                req.session.id = usuario.user_id;
+                req.session.numero = usuario.user_id;
+                req.session.type = usuario.type_id;
                 req.session.started = true;
+                console.log(req.session)
             }
             if (req.body.remember === 'saved') {
                 res.cookie('remember',usuario.email, {maxAge: 600000});
@@ -58,7 +60,6 @@ let usersController={
         })
 
         .catch(function(errores){
-            console.log(errores);
             errors=true;
             res.render('user/login', {errors:errors});
         })
@@ -73,6 +74,28 @@ let usersController={
 
     edit: function(req, res){
         res.render('user/editUser', {session:req.session});
+    },
+
+    editput: function(req,res){
+        let contraEncripted=bcrypt.hashSync(req.body.password,12);
+        db.Users.update({ 
+           photo: req.file.filename,
+           name: req.body.name,
+           lastName: req.body.lastname,
+           email: req.body.email,
+           password: contraEncripted
+        }, {
+            where:{
+                user_id:req.session.numero
+            }
+        })
+        .then(usuario=>{
+            req.session.image=req.file.filename;
+            req.session.name=req.body.name;
+            req.session.lastname=req.body.lastname;
+            req.session.email=req.body.email;
+            res.redirect('/user/detail/'+req.session.numero);
+        })
     }
 
 };
