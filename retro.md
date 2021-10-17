@@ -35,8 +35,8 @@ Retro Sprint 5.
 5. Dejar hacer: No atrasarnos con el contenido del Playground.
 
 Retro Sprint 6.
-1. Comenzar a hacer: Hacer una lista de actividades por completar
+1. Comenzar a hacer: Hacer una lista de actividades por completar.
 2. Hacer más: Comunicación por el grupo de Whatsapp.
-3. Continuar haciendo: Continuar con la comunicación continua dentro del grupo
+3. Continuar haciendo: Continuar con la comunicación continua dentro del grupo.
 4. Hacer menos: Apurarnos para completar con exito los dos sprints que faltan.
 5. Dejar hacer: Dejar de llegar tarde a las juntas de equipo.
