@@ -20,16 +20,23 @@ Retro Sprint 3.
 4. Hacer menos: Plática durante las reuniones en Google Meets.
 5. Dejar hacer: No atrasarnos.
 
-Reto Sprint 4.
+Retro Sprint 4.
 1. Comenzar a hacer: Mayor organización a la hora de reunirse el equipo.
 2. Hacer más: Comunicación por el grupo de Whatsapp.
 3. Continuar haciendo: Terminar el sprint con tiempo para poder cumplir con todo y evitar percances que no puedan solucionarse por falta de tiempo. 
 4. Hacer menos: Plática durante las reuniones en Google Meets.
 5. Dejar hacer: No atrasarnos con el contenido del Playground.
 
-Reto Sprint 5.
+Retro Sprint 5.
 1. Comenzar a hacer: Hacer reuniones para resolver dudas de conceptos y realizar mejoras de la página.
 2. Hacer más: Verificación del sprint antes de mandarlo.
 3. Continuar haciendo: Seguir con la organización del equipo y la buena convivencia.
 4. Hacer menos: Reducir los tiempos entre juntas.
 5. Dejar hacer: No atrasarnos con el contenido del Playground.
+
+Retro Sprint 6.
+1. Comenzar a hacer: Hacer una lista de actividades por completar
+2. Hacer más: Comunicación por el grupo de Whatsapp.
+3. Continuar haciendo: Continuar con la comunicación continua dentro del grupo
+4. Hacer menos: Apurarnos para completar con exito los dos sprints que faltan.
+5. Dejar hacer: Dejar de llegar tarde a las juntas de equipo.
