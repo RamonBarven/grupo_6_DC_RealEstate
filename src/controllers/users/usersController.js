@@ -4,6 +4,7 @@ const bcrypt=require("bcryptjs");
 const { Sequelize } = require("../../../database/models");
 const db=require("../../../database/models");
 const Op= Sequelize.Op;
+const { validationResult } = require('express-validator' );
 
 
 let usersController={
@@ -14,18 +15,25 @@ let usersController={
     favorites:function (req,res) {
         res.render('user/favoritos', {session:req.session});},    
     signuppost:function(req,res){
-        let contraEncripted=bcrypt.hashSync(req.body.password,12);
-        db.Users.create({         
-            photo: req.file.filename,
-            name:req.body.name,
-            lastName:req.body.lastname,
-            email:req.body.email,
-            password:contraEncripted,
-            type_id: req.body.category
-            })
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            let contraEncripted=bcrypt.hashSync(req.body.password,12);
+            db.Users.create({         
+                photo: req.file.filename,
+                name:req.body.name,
+                lastName:req.body.lastname,
+                email:req.body.email,
+                password:contraEncripted,
+                type_id: req.body.category
+                })
             .then(function(usuario){
                 res.redirect('/home');
             }) 
+        } else {
+            res.render('user/signUp', { errors: errors.mapped(), old: req.body });
+        }
+        
     }, 
 
     loginpost: function(req, res){

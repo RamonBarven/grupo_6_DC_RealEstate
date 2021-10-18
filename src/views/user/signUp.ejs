@@ -12,28 +12,43 @@
                         <p class="upload">Add photo</p>
                     </label>
                     <input type=file id="imageU" name="imageU" accept="image/*">
+                    <% if (locals.errorType && errorType.img) { %>
+                        <p class="labelerros"><%= errorType.img.msg %></p>
+                    <% } %>
                     <div class="contenedor-nombre">
-                        <label for="name">
-                            <input type="text" name="name" id="name" placeholder="Name" required>
+                        <label for="name" class="labelerros">
+                            <input type="text" name="name" id="name" placeholder="Name" value="<%= locals.old && old.name ? old.name:'' %>" required>
+                            <% if (locals.errors && errors.name) { %>
+                                <%= errors.name.msg %>
+                            <% } %>
                         </label>
-                        <label for="lastname">
-                            <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                        <label for="lastname" class="labelerros">
+                            <input type="text" name="lastname" id="lastname" placeholder="Last Name" value="<%= locals.old && old.lastname ? old.lastname:'' %>" required>
+                            <% if (locals.errors && errors.lastname) { %>
+                                <%= errors.lastname.msg %>
+                            <% } %>
                         </label>
                     </div>
                     <div class="contenedor-password">
-                        <label for="email">
-                            <input type="email" name="email" id="email" placeholder="Email" required>
+                        <label for="email" class="labelerros">
+                            <input type="email" name="email" id="email" placeholder="Email"  value="<%= locals.old && old.email ? old.email:'' %>" required>
+                            <% if (locals.errors && errors.email) { %>
+                                <%= errors.email.msg %>
+                            <% } %>
                         </label>
-                        <label for="password">
+                        <label for="password" class="labelerros">
                             <input type="password" name="password" id="password" placeholder="Password" required>
+                            <% if (locals.errors && errors.password) { %>
+                                <%= errors.password.msg %>
+                            <% } %>
                         </label>
                     </div>
                     <section class="rectangulo">
                         <div class="saleRent">
-                            <input type="radio" name="category" id="sale" value="1" required>
+                            <input type="radio" name="category" id="sale" value="1" <%=locals.old && old.category === '1'? 'checked':''; %> required>
                             <label class= "sale" for="sale">Buyer</label>
                             <span>/</span>
-                            <input type="radio" name="category" id="rent" value="2" required>
+                            <input type="radio" name="category" id="rent" value="2" <%=locals.old && old.category === '2'? 'checked':''; %>required>
                             <label class="sale" for="rent">Seller</label>
                         </div>
                     </section>
