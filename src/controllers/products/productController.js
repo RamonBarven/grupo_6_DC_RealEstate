@@ -4,6 +4,7 @@ const { Sequelize } = require("../../../database/models");
 const db=require("../../../database/models");
 const Categories = require("../../../database/models/Category");
 const Op= Sequelize.Op;
+const { validationResult } = require('express-validator' );
 
 
 
@@ -31,24 +32,32 @@ let productController={
          })
  
      },
+     
     addpost:function(req,res){
-        db.Products.create({ 
-            image:req.file.filename,
-            category_id:req.body.category,
-            price:req.body.price,
-            description:req.body.description,
-            location:req.body.location,
-            sqft:req.body.sqft,
-            floors:req.body.floors,
-            beds:req.body.beds,
-            baths:req.body.baths,
-        })
-        .then(function(productos){
-            res.redirect('/product');
-        })
-    },
+        let errors = validationResult(req);
 
-    admin: function(req, res) {
+        if (errors.isEmpty()) {
+            db.Products.create({ 
+                image:req.file.filename,
+                category_id:req.body.category,
+                price:req.body.price,
+                description:req.body.description,
+                location:req.body.location,
+                sqft:req.body.sqft,
+                floors:req.body.floors,
+                beds:req.body.beds,
+                baths:req.body.baths,
+            })
+            .then(function(productos){
+                res.redirect('/product');
+            })
+
+        } else {
+            res.render('product/addProduct', { errors: errors.mapped(), old: req.body });
+        }
+        },
+
+    admin: function(req,res) {
        db.Products.findAll({
            include: [{association:"Categories"}]
        }

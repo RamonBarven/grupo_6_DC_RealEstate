@@ -78,6 +78,34 @@
         <button type="submit">Submit</button>
     </div>
     </form>
+    <div class="errors">
+        <ul>
+            <% if (locals.errors && errors.location) { %>
+                <li class="labelerros"><%= errors.location.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.description) { %>
+                <li class="labelerros"><%= errors.description.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.price) { %>
+                <li class="labelerros"><%= errors.price.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.category) { %>
+                <li class="labelerros"><%= errors.category.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.sqft) { %>
+                <li class="labelerros"><%= errors.sqft.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.floors) { %>
+                <li class="labelerros"><%= errors.floors.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.beds) { %>
+                <li class="labelerros"><%= errors.beds.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.baths) { %>
+                <li class="labelerros"><%= errors.baths.msg %></li>
+            <% } %>
+        </ul>
+    </div>
 
     </main>    
         <%-include('../partials/footer')%>
