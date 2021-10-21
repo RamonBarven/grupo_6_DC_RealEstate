@@ -1,10 +1,8 @@
 const { check } = require('express-validator');
-function addProductValid(req, res, next){
-    next();
-    return validation;
+
     
-}
-let validation = [
+    
+let addProductValid = [
     check('location')
         .notEmpty().withMessage('Complete the location').bail()
         .isLength({ min: 5 }).withMessage('Location must be at least 5 letters long'),

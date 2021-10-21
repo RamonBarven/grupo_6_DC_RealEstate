@@ -11,17 +11,13 @@
         <a class="enlaces" href="">About us</a>
         <a class="enlaces" href="/user/favorites"><i class="fas fa-heart" ></i><span id="Fav"> Favorites</span></a>
 
-        <% if(locals.session){
-        if (session.started!=true){%>
+        <% if (session.started!=true){%>
             <a class="enlaces" href="/user/login"><p class="my-account">
             <i class="fas fa-house-user"></i> My account</p></a>
 
         <%}else{%> 
             <a class="enlaces" href="/user/detail/<%=session.numero%>"><p class="my-account">
                 <i class="fas fa-house-user"></i> <%=session.name%></p></a> 
-        <%}} else{%>
-            <a class="enlaces" href="/user/login"><p class="my-account">
-            <i class="fas fa-house-user"></i> My account</p></a>
         <%}%>
     </div>
 </nav>

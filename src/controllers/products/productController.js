@@ -53,7 +53,7 @@ let productController={
             })
 
         } else {
-            res.render('product/addProduct', { errors: errors.mapped(), old: req.body });
+            res.render('product/addProduct', { errors: errors.mapped(), old: req.body, session:req.session});
         }
         },
 
