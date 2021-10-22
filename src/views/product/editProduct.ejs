@@ -16,7 +16,7 @@
             </div>
             
         </section>
-
+    <% if (locals.producto){%>
     <section class="contenedorDerecho">
         <section class="rectangulo">
             <div class="saleRent">
@@ -84,8 +84,108 @@
                 </div>
         </section>
     </div>
+    <% } else { %>
+        <section class="contenedorDerecho">
+            <section class="rectangulo">
+                <div class="saleRent">
+                    <% if (old.category===1){%>
+                    <input type="radio" name="category" id="sale" value="1" checked required>
+                    <label class= "sale" for="sale">Sale</label>
+                    <span>/</span>
+                    <input type="radio" name="category" id="rent" value="2" required>
+                    <label class="sale" for="rent">Rent</label>
+    
+                    <%}else{%>
+                    <input type="radio" name="category" id="sale" value="1"  required>
+                    <label class= "sale" for="sale">Sale</label>
+                    <span>/</span>
+                    <input type="radio" name="category" id="rent" value="2" checked required>
+                    <label class="sale" for="rent">Rent</label>
+                    <%}%>
+                    
+                </div>
+            </section>  
+            <section>
+                <div class="precio">
+                    <div>
+                        <label for="price"><i class="fas fa-tags"></i>
+                            <input type="text" name="price" id="price" placeholder="$Price" value="<%= locals.old && old.price ? old.price:'' %>"required>
+                        </label>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="contenedorDescripcion">
+                <div>
+                    <label class="descripcionTitulo" for="description">Description<br>
+                        <textarea name="description" id="description" placeholder="Insert the description here."  required><%= locals.old && old.description ? old.description:'' %></textarea>
+                    </label>
+                </div>
+            </section>
+        </section>
+        <div class="contenedorAbajo">
+            <section class="detallesRelevantes">  
+                        <div class="location">
+                            <label class="miniTitulos" for="location">Location<br>
+                                <input type="text" name="location" id="location" placeholder="Insert address here." value="<%= locals.old && old.location ? old.location:'' %>" required>
+                            </label>
+                        </div>
+                    <div class="sqft">
+                        <label class="miniTitulos" for="sqft">Sqft<br>
+                            <input type="number" name="sqft" id="sqft" placeholder="##" value="<%= locals.old && old.sqft ? old.sqft:'' %>" required min="0">
+                        </label>
+                    </div>
+                    <div class="floors">
+                        <label class="miniTitulos" for="floors">Floors<br>
+                            <input type="number" name="floors" id="floors" placeholder="##" value="<%= locals.old && old.floors ? old.floors:'' %>">
+                        </label>
+                    </div>
+                    <div class="beds">
+                        <label class="miniTitulos" for="beds">Beds<br>
+                            <input type="number" name="beds" id="beds" placeholder="##" value="<%= locals.old && old.beds ? old.beds:'' %>" required min="0">
+                        </label>
+                    </div>
+                    <div class="baths">
+                        <label class="miniTitulos" for="baths">Baths<br>
+                            <input type="number" name="baths" id="baths" placeholder="##" value="<%= locals.old && old.baths ? old.baths:'' %>" required min="0">
+                        </label>
+                    </div>
+            </section>
+        </div>
+    <% } %> 
     <div>
         <button type="submit">Submit</button>
+    </div>
+    <div class="errors">
+        <ul>
+            <% if (locals.errors && errors.img) { %>
+                <li class="labelerros"><%= errors.img.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.location) { %>
+                <li class="labelerros"><%= errors.location.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.description) { %>
+                <li class="labelerros"><%= errors.description.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.price) { %>
+                <li class="labelerros"><%= errors.price.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.category) { %>
+                <li class="labelerros"><%= errors.category.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.sqft) { %>
+                <li class="labelerros"><%= errors.sqft.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.floors) { %>
+                <li class="labelerros"><%= errors.floors.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.beds) { %>
+                <li class="labelerros"><%= errors.beds.msg %></li>
+            <% } %>
+            <% if (locals.errors && errors.baths) { %>
+                <li class="labelerros"><%= errors.baths.msg %></li>
+            <% } %>
+        </ul>
     </div>
     </form>
 

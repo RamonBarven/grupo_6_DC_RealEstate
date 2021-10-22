@@ -495,6 +495,11 @@ footer {
     position: relative;
 }
 
+.errors ul li {
+    list-style: '🚩';
+    color: red;
+}
+
 
 
 @media (min-width: 770px)  {

@@ -20,7 +20,7 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.TEXT,
         },
         location:{
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(200),
         },
         sqft:{
             type: dataTypes.DECIMAL(6,1),

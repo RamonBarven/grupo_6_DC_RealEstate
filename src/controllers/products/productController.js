@@ -78,24 +78,31 @@ let productController={
 
     editput: function(req,res){
 
-        db.Products.update({ 
-            image:req.file.filename,
-            category_id:req.body.category,
-            price:req.body.price,
-            description:req.body.description,
-            location:req.body.location,
-            sqft:req.body.sqft,
-            floors:req.body.floors,
-            beds:req.body.beds,
-            baths:req.body.baths,
-        }, {
-            where:{
-                product_id:req.params.id
-            }
-        })
-        .then(producto=>{
-            res.redirect('/product/admin');
-        })
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            db.Products.update({ 
+                image:req.file.filename,
+                category_id:req.body.category,
+                price:req.body.price,
+                description:req.body.description,
+                location:req.body.location,
+                sqft:req.body.sqft,
+                floors:req.body.floors,
+                beds:req.body.beds,
+                baths:req.body.baths,
+            }, {
+                where:{
+                    product_id:req.params.id
+                }
+            })
+            .then(producto=>{
+                res.redirect('/product/admin');
+            })
+
+        } else {
+            res.render('product/editProduct', { errors: errors.mapped(), old: req.body, session:req.session, id:req.params.id});
+        }
     },
 
     delete: function(req,res){
