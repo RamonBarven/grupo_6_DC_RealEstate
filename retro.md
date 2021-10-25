@@ -40,3 +40,10 @@ Retro Sprint 6.
 3. Continuar haciendo: Continuar con la comunicación continua dentro del grupo.
 4. Hacer menos: Apurarnos para completar con exito los dos sprints que faltan.
 5. Dejar hacer: Dejar de llegar tarde a las juntas de equipo.
+
+Retro Sprint 7.
+1. Comenzar a hacer: una búsqueda de conceptos desconocidos fuera del playground.
+2. Hacer más: Investigación de los temas.
+3. Continuar haciendo: Reuniones para hacer el sprint juntos.
+4. Hacer menos: Tiempo dedicado al sprint.
+5. Dejar hacer: Llegar tarde a las juntas de trabajo.
