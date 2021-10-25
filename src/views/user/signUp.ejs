@@ -1,6 +1,6 @@
 <%-include('.././partials/head')%>
         <link href="./css/signUp.css" rel="stylesheet">
-        <script src="./js/signUp.js" ></script>
+        
     </head>
     <body> 
         <main class="contenedor-todo">
@@ -18,7 +18,7 @@
                     <% } %>
                     <div class="contenedor-nombre">
                         <label for="name" class="labelerros">
-                            <input type="text" name="name" id="name" placeholder="Name" value="<%= locals.old && old.name ? old.name:'' %>" required>
+                            <input type="text" name="name" id="name" placeholder="Name"  value="<%= locals.old && old.name ? old.name:'' %>" required>
                             <% if (locals.errors && errors.name) { %>
                                 <%= errors.name.msg %>
                             <% } %>
@@ -60,6 +60,6 @@
             </div>
     
         </main>
-
+        <script src="./js/signUp.js" ></script>
     </body>
 </html>

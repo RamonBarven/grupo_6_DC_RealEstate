@@ -97,7 +97,10 @@ html {
     font-weight: bold;
     font-size: 16px;
     text-shadow: 2px 2px 1px black;
+    position: relative;
 }
+
+
 
 #email, #password, #name, #lastname{
     width: 300px;
@@ -113,6 +116,53 @@ html {
 
 #email:focus, #password:focus, #name:focus, #lastname:focus{
     border: 4px solid #5F5F5F;
+}
+.labelerros.incorrect{
+    flex-direction: row;
+}
+
+.labelerros.incorrect::after{
+    content: "At least 2 characters";
+    display:block;
+    color: red;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    font-size: 10px;
+    text-shadow: none;
+}
+
+.labelerros.incorrect2::after{
+    content: "Email invalid";
+    display:block;
+    color: red;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    font-size: 10px;
+    text-shadow: none;
+}
+
+.labelerros.incorrect3::after{
+    content: "At least 8 characters";
+    display:block;
+    color: red;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    font-size: 10px;
+    text-shadow: none;
+}
+
+.labelerros.correct::after{
+    content: "✔️";
+    display:block;
+    color: green;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    font-size: 10px;
+    text-shadow: none;
 }
 
 .contenedor-boton{
@@ -191,6 +241,30 @@ html {
         left: 18px;
         margin:0px 0px 0px 0px;
         color:#007FC6;
+    }
+
+    .labelerros.incorrect::after{
+        right: 15px;
+        top: 25px; 
+        font-size: 16px;
+    }
+
+    .labelerros.incorrect2::after{
+        right: 15px;
+        top: 25px; 
+        font-size: 16px;
+    }
+
+    .labelerros.incorrect3::after{
+        right: 15px;
+        top: 25px; 
+        font-size: 16px;
+    }
+
+    .labelerros.correct::after{
+        right: 30px;
+        top: 25px; 
+        font-size: 16px;
     }
 
     .saleRent label, span {
