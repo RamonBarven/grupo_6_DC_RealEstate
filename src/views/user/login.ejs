@@ -26,7 +26,9 @@
             <form method="POST" action="/user/login">
                 <div class="contenedor-forms">
                         <input type="email" name="email" id="email" placeholder="Email">
+                        <label for="email" class="labelerros">*</label>
                         <input type="password" name="password" id="password" placeholder="Password">
+                        <label for="password" class="labelerros">*</label>
                 </div>
                 <div class="contenedorRecuerdame">
                     <input type="checkbox" id="remember" name="remember" value="saved">
@@ -39,5 +41,6 @@
         <a href="/user/signup" class="signup">Create a new account</a>
 
     </main>
+    <script src="./js/login.js" ></script>
 </body>
 </html>
