@@ -11,6 +11,7 @@ app.use(express.static('../public'));
 const mainRoute=require("./routes/main");
 const productRoute=require("./routes/products");
 const usersRoute=require("./routes/user");
+const apiRoute=require("./routes/api");
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended:false}));
@@ -24,6 +25,7 @@ app.use(rememberMeMiddleware);
 app.use('/',mainRoute);
 app.use('/product',productRoute);
 app.use('/user',usersRoute);
+app.use('/api', apiRoute);
 
 app.listen(3030,()=>{
     console.log('Servidor corriendo en el puerto 3030');
