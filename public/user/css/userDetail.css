@@ -18,6 +18,23 @@ html {
     height: 100%;
 }
 
+.log-out {
+    background-color: #005471;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    right: 15px;
+    top: 80px;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+}
+
+.log-out:hover{
+    background-color: red;
+}
+
 .contenedor-todo {
     display: flex;
     flex-direction: column;
@@ -70,6 +87,7 @@ html {
 .profile {
     border-radius: 50%;
     border: 4px #005471 solid;
+    width: 60vw;
 }
 
 
@@ -131,6 +149,14 @@ H4{
 
     .profile{
         width: 10vw;
+    }
+
+    .log-out{
+        width: 150px;
+        height: 35px;
+        font-size: 24px;
+        right: 40px;
+        top: 40px;
     }
     
     .contenedor-signup {

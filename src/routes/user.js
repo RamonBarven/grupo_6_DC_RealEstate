@@ -30,6 +30,7 @@ router.post('/signup', upload.single('imageU'),validateSignupU, imageValid, emai
 router.get('/favorites',loginMiddleware, usersController.favorites);
 router.post('/login', usersController.loginpost);
 router.get('/detail/:id',loginMiddleware, usersController.detail);
+router.post('/detail/:id', usersController.detailpost);
 
 
 

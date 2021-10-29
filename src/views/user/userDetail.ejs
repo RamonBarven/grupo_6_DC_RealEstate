@@ -6,6 +6,9 @@
         <main class="contenedor-todo">
             <div class="contenedor-signup">
                 <h1 class="signup">My account</h1>
+                <form action="/user/detail/<%=session.numero%>" method="post">
+                    <button class="log-out" type="submit">Log out</button>
+                </form>
                     <img class="profile" src="/user/img/uploads/<%=session.image%>">
                     <div class="contenedor-datos">
                         <a href="/user/edit/<%=session.numero%>" class="edit-link"><i class="fas fa-cog edit"></i></a>

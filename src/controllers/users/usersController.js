@@ -28,6 +28,13 @@ let usersController={
                 type_id: req.body.category
                 })
             .then(function(usuario){
+                req.session.image = usuario.photo;
+                req.session.name = usuario.name;
+                req.session.lastname = usuario.lastName;
+                req.session.email = usuario.email;
+                req.session.numero = usuario.user_id;
+                req.session.type = usuario.type_id;
+                req.session.started = true;
                 res.redirect('/home');
             }) 
         } else {
@@ -78,6 +85,17 @@ let usersController={
     detail: function(req, res){
         res.render('user/userDetail', {session:req.session});
 
+    },
+
+    detailpost:function(req,res){
+        req.session.image = null ;
+        req.session.name = null ;
+        req.session.lastname = null ;
+        req.session.email = null ;
+        req.session.numero = null ;
+        req.session.type = null ;
+        req.session.started = false;
+        res.redirect('/home');
     },
 
     edit: function(req, res){

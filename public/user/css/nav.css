@@ -34,7 +34,7 @@ nav {
     margin: 0px;
 }
 
-#menu:hover ~ .menu-lateral{
+.menu-lateral.activated{
     transform: translateX(50vw);
 }
 
@@ -42,7 +42,7 @@ nav {
     position: fixed;
     background-color: #005471;
     width: 50vw;
-    height: 500px;
+    height: 90vh;
     left: -50vw;
     top: 90px;
     transition: .3s ease all;

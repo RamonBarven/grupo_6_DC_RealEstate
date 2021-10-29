@@ -5,6 +5,9 @@
     let lastname = document.querySelector('input#lastname');
     let email = document.querySelector('input#email');
     let password = document.querySelector('input#password');
+    let imagen = document.getElementById('imageU');
+    let camera = document.querySelector('#camera');
+    let upload = document.querySelector('.upload');
     let label = document.querySelectorAll('label.labelerros');
     let original = label.innerHTML;
     nameUser.addEventListener('change', function(){
@@ -114,4 +117,10 @@
         
     
     });
+
+    imagen.addEventListener('change', function(e){
+        camera.style.color = 'green';
+        upload.innerText='Uploaded✔️';
+    });
+
     

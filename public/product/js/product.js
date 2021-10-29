@@ -3,6 +3,8 @@ let errores = [];
 let loc = document.querySelector('input#location');
 let description = document.querySelector('textarea#description');
 let lista = document.querySelector('ul');
+let imagen = document.getElementById('image');
+let formImagen = document.querySelector('.formImagen');
 
 loc.addEventListener('change', function(){
         
@@ -47,3 +49,10 @@ description.addEventListener('change', function(){
             
     })
 });
+
+imagen.addEventListener('change',function(){
+    formImagen.style.backgroundImage='url(/product/img/uploads/favorito1.png)';
+    formImagen.style.backgroundSize='cover';
+    formImagen.style.backgroundRepeat='no-repeat';
+    formImagen.style.backgroundPosition='center';
+})
